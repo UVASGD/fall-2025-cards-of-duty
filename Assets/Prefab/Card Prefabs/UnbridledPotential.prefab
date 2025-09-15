@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5896631071061687714
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: starCard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: playBehavior
+      value: 
+      objectReference: {fileID: -7257835180639909594}
+    - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Name
+      value: UnbridledPotential
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287540190326765084, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268215918380333270, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4644189200055953041, guid: f9b35e42b288414428177bd63e312a02, type: 3}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8732013272534210680, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      insertIndex: 6
+      addedObject: {fileID: -7257835180639909594}
+  m_SourcePrefab: {fileID: 100100000, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+--- !u!1 &1809483685902439921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+  m_PrefabInstance: {fileID: 5896631071061687714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7257835180639909594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809483685902439921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7ca44e35e3244a0a6f26970450908b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.CardCountWinPlayBehavior
+  requiredCards: 100

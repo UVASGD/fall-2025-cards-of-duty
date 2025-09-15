@@ -13,27 +13,21 @@ MonoBehaviour:
   m_Name: CardDatabase
   m_EditorClassIdentifier: 
   cardList:
-  - id: blankCard
-    card: {fileID: 2865930543325741769, guid: 8f0906325b6f756439d514dc5d5f3773, type: 3}
-  - id: losePointCard
-    card: {fileID: 7599886423614915624, guid: 7e99d07d216c9c345a881384b0a77ca2, type: 3}
   - id: pointCard
-    card: {fileID: 5244891899839244371, guid: 27a6c6ce5da5bd14f9aa3e907bcfb709, type: 3}
-  - id: yoinkCard
-    card: {fileID: 7855284998002521863, guid: 089066470b03dde4bb9e96b77d780a72, type: 3}
+    card: {fileID: 5336923753012019729, guid: b5ecd70d279ff7e40afc5cbfd3de8843, type: 3}
   - id: roughSeas
-    card: {fileID: 2865930543325741769, guid: d726dee33bd12be4799ddac775bf150b, type: 3}
+    card: {fileID: 3525493909888871732, guid: 212d2af2478ee634ebd1fe88aa5adcd0, type: 3}
   - id: gordianKnot
-    card: {fileID: 2865930543325741769, guid: ab2e0c676fbd1b948a65383d339394c1, type: 3}
+    card: {fileID: 1502064289751426024, guid: 0a675fe1ee2051f4ab4af1d671be912d, type: 3}
   - id: tsunami
-    card: {fileID: 2865930543325741769, guid: 763d67bd0c83ccb469617d5bd98ff28a, type: 3}
+    card: {fileID: 3640460423825029652, guid: d4f7e26af40fea24995d7d2fbd5b7f42, type: 3}
   - id: fishing
-    card: {fileID: 2865930543325741769, guid: 9279bca6cb69047408d4b7a71ca1d13e, type: 3}
+    card: {fileID: 818755621864820076, guid: d03d041ca893e6a47873ae092cd7bc06, type: 3}
   - id: highTide
-    card: {fileID: 2865930543325741769, guid: 1a21564630fd7114e86af75c52916eeb, type: 3}
+    card: {fileID: 8066543443648394459, guid: 53407f973b28a1a4b8ec8019eba31fbb, type: 3}
   - id: whirlpool
-    card: {fileID: 2865930543325741769, guid: 0b3bcbc51f0774044804951617916f27, type: 3}
+    card: {fileID: 3122161146418240010, guid: b889a7119e4ace14db04438261e38991, type: 3}
   - id: flood
-    card: {fileID: 2865930543325741769, guid: 577aa386df1b6344a818ab87a554f57e, type: 3}
+    card: {fileID: 221227463720467857, guid: 97435c9cd99fe8e42b55cc0a23fe78da, type: 3}
   - id: unbridledPotential
-    card: {fileID: 2865930543325741769, guid: b9ddde12a4ef8ba47a730699032251d3, type: 3}
+    card: {fileID: 1809483685902439921, guid: 3effaaded21c04748bb069c54a3af55d, type: 3}
