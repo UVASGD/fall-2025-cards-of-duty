@@ -7,11 +7,26 @@ public class Card : MonoBehaviour
 {
     // Define which player state this card belongs to
     protected Player player = null;
+    /**
+     * Whether you can drag this card (disabled when card is automatically moving)
+     */
     private bool moveable = true;
+    /**
+     * Whether this card may be played
+     */
     private bool playable = true;
+    /**
+     * Whether this card has been played this turn
+     */
     private bool hasBeenPlayed = false;
+    /**
+     * Whether this card is highlighted (selected)
+     */
     private bool highlighted = false;
 
+    /**
+     * Number of cards in this stack
+     */
     private int stacks = 1;
     
     private bool lerping = true;
@@ -21,16 +36,23 @@ public class Card : MonoBehaviour
     private Vector3 targetTransform = Vector3.zero;
     
     [SerializeField] private Sprite faceDownSprite;
+    /**
+     * This is set to the current sprite in the SpriteRenderer on Awake()
+     */
     private Sprite faceUpSprite;
     private SpriteRenderer spriteRenderer;
-    [FormerlySerializedAs("text")] [SerializeField] public GameObject playText;
+    [SerializeField] public GameObject playText;
     [SerializeField] public GameObject stackText;
     [SerializeField] public GameObject xText;
+    /**
+     * Destroy this card upon completing an automatic movement (e.g. moving to the discard pile)
+     */
     private bool destroyWhenLerpComplete = false;
     
     private string id;
     [SerializeField] private bool starCard = false;
 
+    // Behavior scripts
     [SerializeField] public BoardBehavior boardBehavior = null;
     [SerializeField] public PlayBehavior playBehavior = null;
     [SerializeField] public VisualBehavior visualBehavior = null;
@@ -97,7 +119,11 @@ public class Card : MonoBehaviour
         }
     }
 
-    // Uses global position
+    /**
+     * Linearly interpolates the card to the specified position
+     * This will tell the method in Update() to start lerping
+     * Note: This uses global coordinates
+     */
     public void TransformLerp(Vector3 endPosition)
     {
         startTransform = transform.position;
@@ -112,6 +138,9 @@ public class Card : MonoBehaviour
         playText.GetComponent<TextMeshProUGUI>().SetText(str);
     }
 
+    /**
+     * Whether you can drag this card (disabled when card is automatically moving)
+     */
     public bool CanMove()
     {
         return moveable;
@@ -184,6 +213,9 @@ public class Card : MonoBehaviour
         Player.TurnStartEvent += OnNewTurnSetPlayable;
     }
 
+    /**
+     * Subscriber method that re-enables card
+     */
     private void OnNewTurnSetPlayable(Player p)
     {
         if (p != player) return;
@@ -192,6 +224,9 @@ public class Card : MonoBehaviour
         playable = true;
     }
     
+    /**
+     * Transfers this card to another player's hand
+     */
     public void TransferToOtherPlayer(Player newPlayer)
     {
         if (player == newPlayer) return;
@@ -204,11 +239,11 @@ public class Card : MonoBehaviour
     {
         return highlighted;
     }
-
+    
+    // todo is there a way to do this without this boolean, perhaps a modifier system?
     private bool scaledAlready;
     public void SetHighlighted(bool highlight)
     {
-        // Game.Log(id + "highlighted: " + highlight);
         highlighted = highlight;
         if (highlighted)
         {
@@ -267,7 +302,7 @@ public class Card : MonoBehaviour
         if (animator) animator.SetTrigger("Wiggle");
     }
     
-    public void PlayStarCardEffect()
+    private void PlayStarCardEffect()
     {
         if (!starCardEffectPrefab) return;
         GameObject obj = Instantiate(starCardEffectPrefab, transform);
@@ -275,6 +310,9 @@ public class Card : MonoBehaviour
         obj.GetComponent<SpriteRenderer>().sprite = spriteRenderer.sprite;
     }
 
+    /**
+     * Checks both if the card itself has been disabled and if the play behavior allows playing
+     */
     public bool CanPlay()
     {
         return playBehavior.CanPlay() && playable;

@@ -155,9 +155,9 @@ public class Player : MonoBehaviour
         return null;
     }
     
-    public void SetGame(Game game)
+    public void SetGame(Game g)
     {
-        this.game = game;
+        game = g;
     }
 
     public bool IsActionable()
@@ -165,9 +165,9 @@ public class Player : MonoBehaviour
         return actionable;
     }
     
-    public void SetActionable(bool actionable)
+    public void SetActionable(bool a)
     {
-        this.actionable = actionable;
+        actionable = a;
     }
 
     public void SetStarCardPlayedThisTurn(bool played)

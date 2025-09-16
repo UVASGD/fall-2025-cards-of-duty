@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using Board;
 using UnityEngine;
 
+/**
+ * Represents a player's hand of cards.
+ * Cards in the hand are children of this GameObject.
+ */
 public class Hand : MonoBehaviour
 {
     
+    /**
+     * Left alignment means cards fill in from left-to-right.
+     */
     enum Alignment
     {
         Left,
@@ -17,12 +24,21 @@ public class Hand : MonoBehaviour
     [SerializeField] private float maxRight = 5;
     [SerializeField] private Alignment alignment = Alignment.Left;
     [SerializeField] private ExpandHandButton expandHandButton;
+    /**
+     * The gap between horizontal cards in the hand, in Unity world units
+     */
     private float gap = 1.5f;
+    /**
+     * The gap between vertical rows of cards in the hand, in Unity world units
+     */
     private float verticalOffset = 2.5f;
     private int maxPerRow = 6;
     
+    /**
+     * Holds the original position of the hand if it changes
+     */
     private Vector3 originalPosition;
-    private bool expanded = false;
+    private bool expanded;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,17 +50,15 @@ public class Hand : MonoBehaviour
         if (transform.position.y > 0) verticalOffset = -verticalOffset;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public int CountCards()
     {
         return transform.childCount;
     }
 
+    /**
+     * Returns the card at the specified index, or null if out of range
+     * Specifically looks at the children of this GameObject
+     */
     public Card GetCard(int index)
     {
         if (index >= transform.childCount) return null;
@@ -52,13 +66,17 @@ public class Hand : MonoBehaviour
         return card;
     }
 
-    // todo break up and move to CPUPlayer class
+    // todo break up and move to CPUPlayer class, since this is only used by CPU
     public void PlayCard(int index)
     {
-        Card card = transform.GetChild(index).GetComponent<Card>();
+        Card card = GetCard(index);
         Player.GetPlayer(this).GetPlayingArea().PlayCard(card);
     }
 
+    /**
+     * Adds a card to the hand and updates the positions of all cards in the hand.
+     * Additionally shows/hides the expand hand button if card count exceeds a threshold
+     */
     public void AddCard(Card card)
     {
         var relativePosition = CalculateCardLocation(transform.childCount);
@@ -81,6 +99,13 @@ public class Hand : MonoBehaviour
             }
         }
     }
+    /**
+     * Starts a coroutine to update the positions of all cards in the hand.
+     */
+    public void UpdateCardLocations()
+    {
+        StartCoroutine(UpdateCardLocationsCoroutine());
+    }
     
     private IEnumerator UpdateCardLocationsCoroutine()
     {
@@ -95,15 +120,14 @@ public class Hand : MonoBehaviour
         }
     }
 
-    public void UpdateCardLocations()
-    {
-        StartCoroutine(UpdateCardLocationsCoroutine());
-    }
-
+    
     private Vector3 CalculateCardLocation(int index)
     {
+        // Determine row and column
         int horizontal = index % maxPerRow;
         int vertical = index / maxPerRow;
+        
+        // Slight indent for odd rows
         float indent = gap / 3.0f;
         Vector3 point = Vector3.zero;
         switch (alignment)
@@ -123,6 +147,9 @@ public class Hand : MonoBehaviour
         return point;
     }
 
+    /**
+     * Merges cards of the same type into a single "card stack". Not used at the moment.
+     */
     public void MergeCards()
     {
         Dictionary<string, List<Card>> cardsTypeSorted = new Dictionary<string, List<Card>>();
@@ -151,6 +178,10 @@ public class Hand : MonoBehaviour
         }
     }
 
+    /**
+     * Expands the hand to show all cards.
+     * Currently is scuffed.
+     */
     public void Expand()
     {
         int rows = transform.childCount / maxPerRow + 1;
@@ -161,6 +192,9 @@ public class Hand : MonoBehaviour
         expandHandButton.DownArrowSprite();
     }
     
+    /**
+     * Contracts the hand back to its original position.
+     */
     public void Contract()
     {
         transform.position = originalPosition;
@@ -173,11 +207,4 @@ public class Hand : MonoBehaviour
     {
         return expanded;
     }
-
-
-
-    // public Vector3 calculateLandingSpot()
-    // {
-    //     Transform[] children = GetComponentsInChildren<Transform>();
-    // }
 }

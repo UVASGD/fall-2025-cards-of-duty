@@ -5,6 +5,7 @@ public class DragCards : MonoBehaviour
 {
     private Card draggingCard;
     private Vector3 originalPosition;
+    
     private Vector3 offset;
     private InputAction leftClickAction;
     private InputAction mousePositionAction;
@@ -34,13 +35,13 @@ public class DragCards : MonoBehaviour
         leftClickAction = InputSystem.actions.FindAction("LeftClick");
         mousePositionAction = InputSystem.actions.FindAction("MousePosition");
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         // click
         if (leftClickAction.WasPressedThisFrame() && !draggingCard)
         {
+            // This casts a ray into the screen and hits anything that the "dragMask" can hit - usually cards
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePositionAction.ReadValue<Vector2>()), Vector2.zero,
         float.PositiveInfinity, dragMask);
             HandleHit(hit);
@@ -64,6 +65,8 @@ public class DragCards : MonoBehaviour
         Card card = hit.transform.GetComponent<Card>();
         if (!card) return;
 
+        // Fires an event that can be cancelled by other scripts
+        // If the event is cancelled, do not proceed
         CardClickEventData eventData = new CardClickEventData(card);
         if (CardClickEvent != null) CardClickEvent(eventData);
         if (eventData.cancelled) return;
@@ -76,6 +79,8 @@ public class DragCards : MonoBehaviour
 
     void OnDrop(Card card)
     {
+        // Casts a ray into the screen and hits anything that the "dropLayermask" can hit
+        // These are usually board objects like the playing area
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero,
             float.PositiveInfinity, dropLayermask);
         
