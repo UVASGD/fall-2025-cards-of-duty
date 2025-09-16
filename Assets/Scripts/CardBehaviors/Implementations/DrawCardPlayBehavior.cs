@@ -7,13 +7,13 @@ namespace CardBehaviors.Implementations
     {
         [SerializeField] private int cardsToDraw = 1;
 
-        public override void Play()
+        public override IEnumerator Play()
         {
             Player player = card.GetPlayer();
             player.SetActionable(false);
             card.SetText($"Draw {cardsToDraw}");
             card.playText.SetActive(true);
-            StartCoroutine(DrawAndEnd());
+            yield return DrawAndEnd();
         }
         
         public override bool CanPlay()

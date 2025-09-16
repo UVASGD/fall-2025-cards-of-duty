@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace CardBehaviors.Implementations
@@ -23,7 +24,7 @@ namespace CardBehaviors.Implementations
 
             return true;
         }
-        public override void Play()
+        public override IEnumerator Play()
         {
             Player player = card.GetPlayer();
             
@@ -31,6 +32,7 @@ namespace CardBehaviors.Implementations
             card.playText.SetActive(true);
             Game.Log("Click a card in your teammate's hand to exchange with this card.");
             DragCards.CardClickEvent += OnCardClick;
+            yield return 0;
         }
         
         void OnCardClick(DragCards.CardClickEventData data)

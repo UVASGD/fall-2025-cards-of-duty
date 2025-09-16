@@ -7,10 +7,10 @@ namespace CardBehaviors.Implementations
     {
         [SerializeField] private int pointsToSteal = 10;
         
-        public override void Play()
+        public override IEnumerator Play()
         {
             card.GetPlayer().SetActionable(false);
-            StartCoroutine(playCoroutine());
+            yield return playCoroutine();
         }
         
         public override bool CanPlay()

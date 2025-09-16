@@ -5,11 +5,11 @@ namespace CardBehaviors.Implementations
 {
     public class BoardCardPlayBehavior : PlayBehavior
     {
-        public override void Play()
+        public override IEnumerator Play()
         {
             card.GetPlayer().SetActionable(false);
             card.playText.SetActive(true);
-            StartCoroutine(playCoroutine());
+            yield return playCoroutine();
         }
         
         IEnumerator playCoroutine()

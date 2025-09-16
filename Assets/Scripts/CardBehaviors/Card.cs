@@ -43,15 +43,12 @@ public class Card : MonoBehaviour
     public delegate void PlayAction(Card card);
     public static event PlayAction CardPlayEvent;
 
-    public bool Play()
+    public void Play()
     {
-        if (!playable) return false;
-        if (!playBehavior.CanPlay()) return false;
         if (starCard) PlayStarCardEffect();
-        playBehavior.Play();
+        StartCoroutine(playBehavior.Play());
         if (CardPlayEvent != null) CardPlayEvent(this);
         hasBeenPlayed = true;
-        return true;
     }
     
     public void Discard()
@@ -276,5 +273,10 @@ public class Card : MonoBehaviour
         GameObject obj = Instantiate(starCardEffectPrefab, transform);
         obj.transform.localPosition = Vector3.zero;
         obj.GetComponent<SpriteRenderer>().sprite = spriteRenderer.sprite;
+    }
+
+    public bool CanPlay()
+    {
+        return playBehavior.CanPlay() && playable;
     }
 }

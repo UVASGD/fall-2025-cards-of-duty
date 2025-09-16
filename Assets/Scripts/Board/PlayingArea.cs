@@ -33,17 +33,18 @@ public class PlayingArea : MonoBehaviour
     public bool PlayCard(Card card)
     {
         Player player = card.GetPlayer();
+        
+        if (!card.CanPlay()) return false;
+        
         MoveCardToCenter(card);
         
-        if (!card.Play())
-        {
-            card.transform.SetParent(player.GetPlayerHand().transform);
-            return false;
-        }
+        // It is the play behavior's responsibility to set the player actionable again
+        player.SetActionable(false);
+        if (card.IsStarCard()) player.SetStarCardPlayedThisTurn(true);
         
         card.Show();
+        card.Play();
         player.GetPlayerHand().UpdateCardLocations();
-        
         return true;
     }
 

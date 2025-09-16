@@ -15,7 +15,7 @@ namespace CardBehaviors.Implementations
             return true;
         }
 
-        public override void Play()
+        public override IEnumerator Play()
         {
             Player player = card.GetPlayer();
             Player opponent = player.GetOpponent();
@@ -24,7 +24,7 @@ namespace CardBehaviors.Implementations
             {
                 player.SetActionable(false);
                 player.SetStarCardPlayedThisTurn(true);
-                StartCoroutine(Coroutine(opponent.GetDeck()));
+                yield return Coroutine(opponent.GetDeck());
             }
         }
 

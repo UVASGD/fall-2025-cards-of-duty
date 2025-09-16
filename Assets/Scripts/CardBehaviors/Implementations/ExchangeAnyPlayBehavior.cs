@@ -36,7 +36,7 @@ namespace CardBehaviors.Implementations
             return true;
         }
         
-        public override void Play()
+        public override IEnumerator Play()
         {
             Player player = card.GetPlayer();
             
@@ -48,6 +48,7 @@ namespace CardBehaviors.Implementations
             // Make sure you can't pick the same card twice
             // Then swap the selected cards
             DragCards.CardClickEvent += OnCardClickSelf;
+            yield return 0;
         }
 
         // todo reduce code duplication

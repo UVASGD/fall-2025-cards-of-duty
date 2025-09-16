@@ -28,7 +28,7 @@ namespace CardBehaviors.Implementations
             return true;
         }
         
-        public override void Play()
+        public override IEnumerator Play()
         {
             Player player = card.GetPlayer();
             player.SetActionable(false);
@@ -37,6 +37,7 @@ namespace CardBehaviors.Implementations
             card.playText.SetActive(true);
             Game.Log($"Click {cardsToDiscard} card(s) in your hand to discard.");
             DragCards.CardClickEvent += OnCardClick;
+            yield return 0;
         }
 
         void OnCardClick(DragCards.CardClickEventData data)

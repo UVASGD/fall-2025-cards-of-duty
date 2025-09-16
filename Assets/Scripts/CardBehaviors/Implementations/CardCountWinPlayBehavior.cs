@@ -17,12 +17,11 @@ namespace CardBehaviors.Implementations
             return true;
         }
         
-        public override void Play()
+        public override IEnumerator Play()
         {
             card.GetPlayer().SetActionable(false);
             card.playText.SetActive(true);
-            card.StartCoroutine(Coroutine());
-            card.GetPlayer().SetStarCardPlayedThisTurn(true);
+            yield return Coroutine();
             
         }
 

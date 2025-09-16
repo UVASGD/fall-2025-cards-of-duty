@@ -104,7 +104,9 @@ public class DragCards : MonoBehaviour
         if (type == typeof(PlayingArea) && !card.HasBeenPlayed())
         {
             if (!player.GetPlayingArea().PlayCard(card))
+            {
                 card.TransformLerp(originalPosition);
+            }
         }
         else if (type == typeof(DiscardPile))
         {
