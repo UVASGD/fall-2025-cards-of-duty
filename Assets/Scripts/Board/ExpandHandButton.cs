@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Board
 {
+    /**
+     * A button that expands and collapses the player's hand if there are too many cards.
+     */
     public class ExpandHandButton : MonoBehaviour
     {
         public SpriteRenderer spriteRenderer; 

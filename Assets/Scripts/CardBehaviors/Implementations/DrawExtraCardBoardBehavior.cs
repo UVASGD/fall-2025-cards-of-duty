@@ -1,6 +1,9 @@
 namespace CardBehaviors.Implementations
 {
-    public class RoughSeasBoardBehavior : BoardBehavior
+    /**
+     * Lets the player draw an extra card at the start of their turn.
+     */
+    public class DrawExtraCardBoardBehavior : BoardBehavior
     {
         public override void RegisterEvents()
         {

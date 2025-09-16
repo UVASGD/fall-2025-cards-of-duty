@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
+    /**
+     * Play behavior that adds the card to the board when played.
+     */
     public class BoardCardPlayBehavior : PlayBehavior
     {
         public override IEnumerator Play()

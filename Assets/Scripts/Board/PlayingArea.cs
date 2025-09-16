@@ -5,8 +5,14 @@ using UnityEngine.InputSystem.Controls;
 public class PlayingArea : MonoBehaviour
 {
 
+    /**
+     * A list of locations where board cards can go, as relative locations to the playing area
+     */
     private List<Vector3> boardCardRelativeLocations = new List<Vector3>();
-
+    
+    /**
+     * Holds active board cards
+     */
     private Card[] boardCards;
     
     
@@ -23,13 +29,7 @@ public class PlayingArea : MonoBehaviour
 
         boardCards = new Card[boardCardRelativeLocations.Count];
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    
     public bool PlayCard(Card card)
     {
         Player player = card.GetPlayer();
@@ -48,12 +48,18 @@ public class PlayingArea : MonoBehaviour
         return true;
     }
 
+    /**
+     * Moves the card to the center of the playing area
+     */
     private void MoveCardToCenter(Card card)
     {
         card.transform.SetParent(transform, true);
         card.TransformLerp(transform.position);
     }
 
+    /**
+     * Adds a board card to the playing area in the next available slot
+     */
     public void AddBoardCard(Card card)
     {
         int slot = 0;

@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
+    /**
+     * Exchanges this card ONLY with a selected card in your teammate's hand.
+     */
     public class ExchangeThisPlayBehavior : PlayBehavior
     {
         

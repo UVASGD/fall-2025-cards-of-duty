@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
+    /**
+     * Makes the player draw a specified number of cards when played.
+     */
     public class DrawCardPlayBehavior : PlayBehavior
     {
         [SerializeField] private int cardsToDraw = 1;

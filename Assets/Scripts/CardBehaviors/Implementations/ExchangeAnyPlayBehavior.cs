@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
+    /**
+     * Allows the player to first choose some cards from their hand, then choose some cards from their teammate's hand,
+     * and then exchanges the chosen cards.
+     */
     public class ExchangeAnyPlayBehavior : PlayBehavior
     {
         [SerializeField] private int selfCardCount = 2;

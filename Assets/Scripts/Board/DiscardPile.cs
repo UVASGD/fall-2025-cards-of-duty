@@ -6,6 +6,9 @@ using UnityEngine;
 public class DiscardPile : MonoBehaviour
 {
     SpriteRenderer spriteRenderer = null;
+    /**
+     * Sprite for empty discard pile
+     */
     Sprite emptySprite = null;
     private Player player = null;
     Stack<string> discardedCards = new Stack<string>();
@@ -22,6 +25,7 @@ public class DiscardPile : MonoBehaviour
     // todo revisit in case this is too expensive
     void Update()
     {
+        // Only update the text if the count has changed
         if (lastCount == discardedCards.Count) return;
         lastCount = discardedCards.Count;
         UpdateText();

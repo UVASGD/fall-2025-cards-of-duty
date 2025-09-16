@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
+    /**
+     * Counts all cards in the player's hand, deck, and discard pile.
+     * If that total exceeds requireCards, the player wins the game.
+     */
     public class CardCountWinPlayBehavior : PlayBehavior
     {
         [SerializeField] private int requiredCards = 100;

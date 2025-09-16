@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
+    /**
+     * Prompts the player to choose cards to discard, then draws new cards.
+     */
     public class DiscardAndDrawPlayBehavior : PlayBehavior
     {
         [SerializeField] private int cardsToDiscard = 1;

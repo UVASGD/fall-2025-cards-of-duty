@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
+    /**
+     * A board behavior that clones any non-star card and discards the duplicate.
+     */
     public class ClonePlayedCardsBoardBehavior : BoardBehavior
     {
         public override void RegisterEvents()

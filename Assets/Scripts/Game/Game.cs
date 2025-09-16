@@ -12,13 +12,21 @@ public class Game : MonoBehaviour
 
     [SerializeField] private CardDatabase cardDatabase = null;
     [SerializeField] private TextMeshProUGUI messageText = null;
+    /**
+     * Text for displaying messages to the player.
+     * This is static so it can be accessed from anywhere.
+     */
     private static TextMeshProUGUI staticMessageText = null;
 
+    /**
+     * Defines whose turn it is.
+     */
     private int activePlayerIndex = 0;
     private List<Player> turnOrder = new List<Player>();
 
     void Awake()
     {
+        // todo If we add other menus besides the actual game, we should not set the framerate here.
         Application.targetFrameRate = 60;
         staticMessageText = messageText;
         if (staticMessageText) staticMessageText.text = "";
@@ -55,6 +63,9 @@ public class Game : MonoBehaviour
         turnOrder[0].TurnStart();
     }
 
+    /**
+     * Called by players to end their turn.
+     */
     public void NextTurn(Player whoEndedTurn)
     {
         if (!whoEndedTurn) return;
@@ -107,6 +118,9 @@ public class Game : MonoBehaviour
         staticMessageText.text = text;
     }
 
+    /**
+     * Win message. A bit underwhelming right now.
+     */
     public static void PlayerWin()
     {
         if (!staticMessageText) return;

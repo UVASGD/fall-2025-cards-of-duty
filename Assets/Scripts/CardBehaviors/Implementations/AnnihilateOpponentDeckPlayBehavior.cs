@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
+    /**
+     * Annihilates half of the opponent's deck and draws that many cards.
+     */
     public class AnnihilateOpponentDeckPlayBehavior : PlayBehavior
     {
         public override bool CanPlay()

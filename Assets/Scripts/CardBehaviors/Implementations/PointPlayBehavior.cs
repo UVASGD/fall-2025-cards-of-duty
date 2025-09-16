@@ -3,7 +3,9 @@ using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
-    
+    /**
+     * Grants a set amount of points.
+     */
     public class PointPlayBehavior : PlayBehavior
     {
         [SerializeField] private int pointsToAdd;

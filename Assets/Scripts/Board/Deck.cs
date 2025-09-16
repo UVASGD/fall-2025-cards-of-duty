@@ -5,9 +5,14 @@ using TMPro;
 
 public class Deck : MonoBehaviour
 {
-    // Define which player state this card belongs to
     protected Player player = null;
+    /**
+     * Represents the actual cards in the deck once loaded
+     */
     Stack<string> cardIds = new Stack<string>();
+    /**
+     * The deck asset to load cards from
+     */
     [SerializeField] private CardDeck staticDeck = null;
     [SerializeField] private TextMeshProUGUI cardCountText = null;
     [SerializeField] private GameObject explosionPrefab;
@@ -28,6 +33,7 @@ public class Deck : MonoBehaviour
     // todo revisit in case this is too expensive
     void Update()
     {
+        // Only update the text if the count has changed
         if (lastCount == cardIds.Count) return;
         lastCount = cardIds.Count;
         UpdateText();
@@ -132,6 +138,9 @@ public class Deck : MonoBehaviour
         }
     }
 
+    /**
+     * Deletes half the cards in the deck, rounded down, and returns the number of cards deleted
+     */
     public int AnnihilateHalf()
     {
         int total = cardIds.Count / 2;
