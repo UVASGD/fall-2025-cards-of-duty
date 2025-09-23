@@ -13,6 +13,7 @@ namespace CardBehaviors.Implementations
         
         public override bool CanPlay()
         {
+            if (!base.CanPlay()) return false;
             if (card.GetPlayer().HasStarCardPlayedThisTurn())
             {
                 Game.Log("A star card has already been played this turn!");

@@ -202,4 +202,9 @@ public class Player : MonoBehaviour
         affinities.Clear();
     }
 
+    public int GetAffinity(string affinityType)
+    {
+        return affinities.GetValueOrDefault(affinityType, 0);
+    }
+
 }

@@ -17,6 +17,7 @@ namespace CardBehaviors.Implementations
         
         public override bool CanPlay()
         {
+            if (!base.CanPlay()) return false;
             Player player = card.GetPlayer();
             Player teammate = player.GetTeammate();
             if (!teammate)

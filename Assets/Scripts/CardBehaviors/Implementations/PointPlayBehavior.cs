@@ -18,6 +18,7 @@ namespace CardBehaviors.Implementations
         
         public override bool CanPlay()
         {
+            if (!base.CanPlay()) return false;
             return true;
         }
         

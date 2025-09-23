@@ -15,6 +15,7 @@ namespace CardBehaviors.Implementations
         
         public override bool CanPlay()
         {
+            if (!base.CanPlay()) return false;
             Player player = card.GetPlayer();
             if (player.GetPlayerHand().CountCards() < cardsToDiscard)
             {

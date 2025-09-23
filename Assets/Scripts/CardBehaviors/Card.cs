@@ -1,7 +1,6 @@
 using CardBehaviors;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Card : MonoBehaviour
 {
