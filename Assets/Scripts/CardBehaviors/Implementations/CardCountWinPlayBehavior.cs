@@ -24,6 +24,7 @@ namespace CardBehaviors.Implementations
         
         public override IEnumerator Play()
         {
+            yield return base.Play();
             card.GetPlayer().SetActionable(false);
             card.playText.SetActive(true);
             yield return Coroutine();

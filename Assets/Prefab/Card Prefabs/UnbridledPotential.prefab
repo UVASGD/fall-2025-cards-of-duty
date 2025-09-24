@@ -94,4 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ca44e35e3244a0a6f26970450908b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.CardCountWinPlayBehavior
+  affinityCost: 0
+  affinityType: water
   requiredCards: 100

@@ -6,6 +6,7 @@ namespace CardBehaviors.Implementations
     {
         public override IEnumerator Play()
         {
+            yield return base.Play();
             card.Discard();
             card.GetPlayer().SetActionable(true);
             yield return 0;

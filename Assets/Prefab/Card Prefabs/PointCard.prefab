@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141f346af55840a49ac1d6033063c0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.PointPlayBehavior
+  affinityCost: 0
+  affinityType: water
   pointsToAdd: 0
 --- !u!114 &7722085650001210813 stripped
 MonoBehaviour:

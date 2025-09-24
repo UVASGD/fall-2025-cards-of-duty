@@ -7,11 +7,16 @@ namespace CardBehaviors
     {
         [SerializeField] protected int affinityCost = 0;
         [SerializeField] protected string affinityType = "";
+
         /**
          * This is a coroutine that plays the card.
          * It being a coroutine is important, because it allows for animations to be played.
          */
-        public abstract IEnumerator Play();
+        public virtual IEnumerator Play()
+        {
+            card.GetPlayer().AddAffinity(affinityType, 1);
+            yield return 0;
+        }
 
         public virtual bool CanPlay()
         {

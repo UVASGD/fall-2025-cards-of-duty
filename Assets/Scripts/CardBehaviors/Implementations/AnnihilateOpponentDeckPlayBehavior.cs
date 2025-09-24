@@ -22,6 +22,7 @@ namespace CardBehaviors.Implementations
 
         public override IEnumerator Play()
         {
+            yield return base.Play();
             Player player = card.GetPlayer();
             Player opponent = player.GetOpponent();
             card.playText.SetActive(true);

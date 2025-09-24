@@ -34,6 +34,7 @@ namespace CardBehaviors.Implementations
         
         public override IEnumerator Play()
         {
+            yield return base.Play();
             Player player = card.GetPlayer();
             player.SetActionable(false);
             player.SetStarCardPlayedThisTurn(true);

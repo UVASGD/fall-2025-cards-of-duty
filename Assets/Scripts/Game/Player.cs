@@ -119,6 +119,7 @@ public class Player : MonoBehaviour
     {
         turn = true;
         actionable = true;
+        ResetAffinities();
         
         deck.DrawTopCard();
 
@@ -191,7 +192,8 @@ public class Player : MonoBehaviour
     
     public void AddAffinity(string affinity, int amount)
     {
-        if (!affinities.TryAdd(affinity, 0))
+        if (String.IsNullOrEmpty(affinity)) return;
+        if (!affinities.TryAdd(affinity, amount))
         {
             affinities[affinity] += amount;
         }
