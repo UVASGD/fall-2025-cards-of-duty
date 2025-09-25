@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using Board;
 using TMPro;
 using UnityEngine;
@@ -19,8 +21,10 @@ public class Player : MonoBehaviour
     [SerializeField] private Deck deck = null;
     [SerializeField] private DiscardPile discardPile = null;
     [SerializeField] private EndTurnButton endTurnButton = null;
+    [SerializeField] private AffinityDisplay affinityDisplay = null;
     
     private bool turn;
+    public Dictionary<string, int> affinities = new Dictionary<string, int>();
     private bool starCardPlayedThisTurn = false;
 
     public delegate void TurnStartAction(Player player);
@@ -115,6 +119,7 @@ public class Player : MonoBehaviour
     {
         turn = true;
         actionable = true;
+        ResetAffinities();
         
         deck.DrawTopCard();
 
@@ -183,6 +188,25 @@ public class Player : MonoBehaviour
     public Player GetTeammate()
     {
         return game.GetTeammate(this);
+    }
+    
+    public void AddAffinity(string affinity, int amount)
+    {
+        if (String.IsNullOrEmpty(affinity)) return;
+        if (!affinities.TryAdd(affinity, amount))
+        {
+            affinities[affinity] += amount;
+        }
+    }
+
+    public void ResetAffinities()
+    {
+        affinities.Clear();
+    }
+
+    public int GetAffinity(string affinityType)
+    {
+        return affinities.GetValueOrDefault(affinityType, 0);
     }
 
 }

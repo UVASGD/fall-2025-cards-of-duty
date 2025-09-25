@@ -90,4 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2520ab3f166a437d977dbb0f0d56968e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.DrawCardPlayBehavior
+  affinityCost: 0
+  affinityType: water
   cardsToDraw: 1

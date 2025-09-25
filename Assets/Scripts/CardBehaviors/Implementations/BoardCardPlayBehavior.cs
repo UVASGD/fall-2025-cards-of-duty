@@ -10,6 +10,7 @@ namespace CardBehaviors.Implementations
     {
         public override IEnumerator Play()
         {
+            yield return base.Play();
             card.GetPlayer().SetActionable(false);
             card.playText.SetActive(true);
             yield return playCoroutine();
@@ -29,6 +30,7 @@ namespace CardBehaviors.Implementations
         
         public override bool CanPlay()
         {
+            if (!base.CanPlay()) return false;
             return true;
         }
     }

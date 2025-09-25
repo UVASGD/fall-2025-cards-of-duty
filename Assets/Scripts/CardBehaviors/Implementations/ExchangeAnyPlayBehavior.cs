@@ -17,6 +17,7 @@ namespace CardBehaviors.Implementations
         
         public override bool CanPlay()
         {
+            if (!base.CanPlay()) return false;
             Player player = card.GetPlayer();
             Player teammate = player.GetTeammate();
             if (!teammate)
@@ -42,6 +43,7 @@ namespace CardBehaviors.Implementations
         
         public override IEnumerator Play()
         {
+            yield return base.Play();
             Player player = card.GetPlayer();
             
             player.SetActionable(false);

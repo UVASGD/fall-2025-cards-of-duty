@@ -12,6 +12,7 @@ namespace CardBehaviors.Implementations
 
         public override IEnumerator Play()
         {
+            yield return base.Play();
             Player player = card.GetPlayer();
             player.SetActionable(false);
             card.SetText($"Draw {cardsToDraw}");
@@ -21,6 +22,7 @@ namespace CardBehaviors.Implementations
         
         public override bool CanPlay()
         {
+            if (!base.CanPlay()) return false;
             return true;
         }
         

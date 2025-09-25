@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723c7424cf8149b79cf00d7aac0f5966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.ExchangeThisPlayBehavior
+  affinityCost: 0
+  affinityType: water
 --- !u!1 &4148795081014292341 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8792767719370394186, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}

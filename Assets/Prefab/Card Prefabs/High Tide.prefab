@@ -90,5 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fd8cbc452746459620d43ede6d8517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.ExchangeAnyPlayBehavior
+  affinityCost: 0
+  affinityType: water
   selfCardCount: 2
   teammateCardCount: 2

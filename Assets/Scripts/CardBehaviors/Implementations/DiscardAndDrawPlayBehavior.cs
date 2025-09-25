@@ -15,6 +15,7 @@ namespace CardBehaviors.Implementations
         
         public override bool CanPlay()
         {
+            if (!base.CanPlay()) return false;
             Player player = card.GetPlayer();
             if (player.GetPlayerHand().CountCards() < cardsToDiscard)
             {
@@ -33,6 +34,7 @@ namespace CardBehaviors.Implementations
         
         public override IEnumerator Play()
         {
+            yield return base.Play();
             Player player = card.GetPlayer();
             player.SetActionable(false);
             player.SetStarCardPlayedThisTurn(true);
