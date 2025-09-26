@@ -43,7 +43,7 @@ namespace Board
                 if (card && !leftClickAction.IsPressed())
                 {
                     card.Wiggle();
-                    card.displayDescription(true)
+                    card.displayDescription(true);
                 }
                 newSprite.sortingOrder += 10;
             }
