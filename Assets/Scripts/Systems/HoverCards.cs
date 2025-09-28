@@ -43,7 +43,7 @@ namespace Board
                 if (card && !leftClickAction.IsPressed())
                 {
                     card.Wiggle();
-                    card.displayDescription(true);
+                    card.DisplayDescription(true);
                 }
                 newSprite.sortingOrder += 10;
             }
@@ -58,9 +58,9 @@ namespace Board
             
             //Stops the card description from being displayed
             Card card = hoveredTransform.GetComponent<Card>();
-            if (card != null)
+            if (card)
             {
-                card.displayDescription(false);
+                card.DisplayDescription(false);
             }
 
             hoveredTransform = null;

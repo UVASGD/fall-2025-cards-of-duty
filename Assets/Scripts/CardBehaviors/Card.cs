@@ -319,8 +319,8 @@ public class Card : MonoBehaviour
         return playBehavior.CanPlay() && playable;
     }
     
-    public void displayDescription(bool e)
+    public void DisplayDescription(bool b)
     {
-        cardDescription.SetActive(e);    
+        cardDescription.SetActive(b);    
     }
 }
