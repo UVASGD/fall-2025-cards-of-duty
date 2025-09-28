@@ -160,6 +160,7 @@ MonoBehaviour:
   playText: {fileID: 4967338376846137043}
   stackText: {fileID: 8696169788044995397}
   xText: {fileID: 8792767719370394186}
+  cardDescription: {fileID: 8957784471782679971}
   starCard: 0
   boardBehavior: {fileID: 7634530972623112191}
   playBehavior: {fileID: 8732013272534210680}
@@ -202,6 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e111d932cf44d7f8cbbededd4b6755d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.DefaultPlayBehavior
+  affinityCost: 0
+  affinityType: 
 --- !u!114 &3855203385527233096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,6 +247,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8536844071002148008}
     m_Modifications:
+    - target: {fileID: 1398371897245389205, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1772876463625512584, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
       propertyPath: m_Name
       value: CardCanvas
@@ -355,5 +362,10 @@ GameObject:
 --- !u!1 &8792767719370394186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1530764239759130236, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+  m_PrefabInstance: {fileID: 8014281227516163126}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8957784471782679971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1398371897245389205, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
   m_PrefabInstance: {fileID: 8014281227516163126}
   m_PrefabAsset: {fileID: 0}

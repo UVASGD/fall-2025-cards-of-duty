@@ -43,6 +43,8 @@ public class Card : MonoBehaviour
     [SerializeField] public GameObject playText;
     [SerializeField] public GameObject stackText;
     [SerializeField] public GameObject xText;
+    [SerializeField] public GameObject cardDescription;
+    
     /**
      * Destroy this card upon completing an automatic movement (e.g. moving to the discard pile)
      */
@@ -315,5 +317,10 @@ public class Card : MonoBehaviour
     public bool CanPlay()
     {
         return playBehavior.CanPlay() && playable;
+    }
+    
+    public void DisplayDescription(bool b)
+    {
+        cardDescription.SetActive(b);    
     }
 }
