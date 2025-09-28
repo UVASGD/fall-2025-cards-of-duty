@@ -30,7 +30,7 @@ public class Card : MonoBehaviour
     
     private bool lerping = true;
     private float lerpTime = 0;
-    private const float lerpIncrement = 1 / 15f;
+    private const float lerpDuration = 0.25f;
     private Vector3 startTransform = Vector3.zero;
     private Vector3 targetTransform = Vector3.zero;
     
@@ -103,20 +103,19 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (lerping)
+        if (!lerping) return;
+        
+        lerpTime += Time.deltaTime;
+        if (lerpTime > lerpDuration) lerpTime = lerpDuration;
+        transform.position = Vector3.Lerp(startTransform, targetTransform, lerpTime/lerpDuration);
+        
+        if (lerpTime < lerpDuration) return;
+        lerping = false;
+        moveable = true;
+        lerpTime = 0;
+        if (destroyWhenLerpComplete)
         {
-            lerpTime += lerpIncrement;
-            transform.position = Vector3.Lerp(startTransform, targetTransform, lerpTime);
-            if (lerpTime >= 1)
-            {
-                lerping = false;
-                moveable = true;
-                lerpTime = 0;
-                if (destroyWhenLerpComplete)
-                {
-                    Destroy(gameObject);
-                }
-            }
+            Destroy(gameObject);
         }
     }
 
