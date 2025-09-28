@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: starCard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: playBehavior
       value: 
       objectReference: {fileID: 1165328531684572238}
