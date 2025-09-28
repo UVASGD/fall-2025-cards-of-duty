@@ -17,7 +17,8 @@ namespace CardBehaviors.Implementations
         
         public void TurnStartEvent(Player player)
         {
-            if (card.GetPlayer() != player) return;
+            PlayingArea area = card.GetPlayer().GetPlayingArea();
+            if (player.GetPlayingArea() != area) return;
             player.GetDeck().DrawTopCard();
         }
     }

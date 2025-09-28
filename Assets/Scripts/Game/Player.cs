@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Deck deck = null;
     [SerializeField] private DiscardPile discardPile = null;
     [SerializeField] private EndTurnButton endTurnButton = null;
-    [SerializeField] private AffinityDisplay affinityDisplay = null;
+    // [SerializeField] private AffinityDisplay affinityDisplay = null;
     
     private bool turn;
     public Dictionary<string, int> affinities = new Dictionary<string, int>();
