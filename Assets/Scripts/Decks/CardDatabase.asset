@@ -15,19 +15,37 @@ MonoBehaviour:
   cardList:
   - id: pointCard
     card: {fileID: 5336923753012019729, guid: b5ecd70d279ff7e40afc5cbfd3de8843, type: 3}
+    shortDescription: 
+    description: 
   - id: roughSeas
     card: {fileID: 3525493909888871732, guid: 212d2af2478ee634ebd1fe88aa5adcd0, type: 3}
+    shortDescription: 
+    description: 
   - id: gordianKnot
     card: {fileID: 1502064289751426024, guid: 0a675fe1ee2051f4ab4af1d671be912d, type: 3}
+    shortDescription: 
+    description: 
   - id: tsunami
     card: {fileID: 3640460423825029652, guid: d4f7e26af40fea24995d7d2fbd5b7f42, type: 3}
+    shortDescription: 
+    description: 
   - id: fishing
     card: {fileID: 818755621864820076, guid: d03d041ca893e6a47873ae092cd7bc06, type: 3}
+    shortDescription: 
+    description: 
   - id: highTide
     card: {fileID: 8066543443648394459, guid: 53407f973b28a1a4b8ec8019eba31fbb, type: 3}
+    shortDescription: 
+    description: 
   - id: whirlpool
     card: {fileID: 3122161146418240010, guid: b889a7119e4ace14db04438261e38991, type: 3}
+    shortDescription: 
+    description: 
   - id: flood
     card: {fileID: 221227463720467857, guid: 97435c9cd99fe8e42b55cc0a23fe78da, type: 3}
+    shortDescription: 
+    description: 
   - id: unbridledPotential
     card: {fileID: 1809483685902439921, guid: 3effaaded21c04748bb069c54a3af55d, type: 3}
+    shortDescription: 
+    description: 

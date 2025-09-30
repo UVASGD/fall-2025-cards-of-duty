@@ -14,6 +14,10 @@ public class CardDatabase : ScriptableObject
     {
         public string id;
         public GameObject card;
+        [TextArea(1, 2)]
+        public string shortDescription;
+        [TextArea(2, 7)]
+        public string description;
     }
 
     public static Card InstantiateCard(string str, Transform parent)
