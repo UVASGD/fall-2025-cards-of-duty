@@ -22,6 +22,7 @@ namespace Board
                 displayText += $"{entry.Key}: {entry.Value}\n";
             }
             textMesh.text = displayText;
+            // test
         }
     }
 }
