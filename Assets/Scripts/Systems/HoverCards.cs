@@ -38,8 +38,8 @@ namespace Board
                 }
 
                 hoveredTransform = hit.transform;
-                SpriteRenderer newSprite = hoveredTransform.GetComponent<SpriteRenderer>();
                 Card card = hoveredTransform.GetComponent<Card>();
+                SpriteRenderer newSprite = card.GetSpriteRenderer();
                 if (card && !leftClickAction.IsPressed())
                 {
                     card.Wiggle();
@@ -51,13 +51,17 @@ namespace Board
 
         private void ResetHovered()
         {
-            SpriteRenderer sprite = hoveredTransform.GetComponent<SpriteRenderer>();
+            //Stops the card description from being displayed
+            Card card = hoveredTransform.GetComponent<Card>();
+            if (card)
+            {
+                card.DisplayDescription(false);
+            }
+
+            SpriteRenderer sprite = card.GetSpriteRenderer();
             // todo this is unsafe if something else changed the sorting order
             // this is visible after using Fishing - the target card is placed in a negative sorting order
             sprite.sortingOrder -= 10;
-            
-            //Stops the card description from being displayed
-            Card card = hoveredTransform.GetComponent<Card>();
             if (card)
             {
                 card.DisplayDescription(false);

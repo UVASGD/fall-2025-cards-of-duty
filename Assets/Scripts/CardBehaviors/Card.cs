@@ -35,11 +35,14 @@ public class Card : MonoBehaviour
     private Vector3 targetTransform = Vector3.zero;
     
     [SerializeField] private Sprite faceDownSprite;
+    // todo temporary
+    [SerializeField] private bool newSizes = false;
     /**
      * This is set to the current sprite in the SpriteRenderer on Awake()
      */
     private Sprite faceUpSprite;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
+    [SerializeField] public GameObject sprite;
     [SerializeField] public GameObject playText;
     [SerializeField] public GameObject stackText;
     [SerializeField] public GameObject xText;
@@ -82,7 +85,7 @@ public class Card : MonoBehaviour
     void Awake()
     {
         player = Player.GetPlayer(this);
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = sprite.GetComponent<SpriteRenderer>();
         faceUpSprite = spriteRenderer.sprite;
         animator = GetComponent<Animator>();
         if (playText) playText.SetActive(false);
@@ -93,11 +96,14 @@ public class Card : MonoBehaviour
     public void Show()
     {
         spriteRenderer.sprite = faceUpSprite;
+        if (newSizes) spriteRenderer.gameObject.transform.localScale = new Vector3(4.8f, 4.8f, 4.8f);
     }
     
     public void Hide()
     {
         spriteRenderer.sprite = faceDownSprite;
+        // todo temporary
+        spriteRenderer.gameObject.transform.localScale = new Vector3(1, 1, 1);
     }
 
     // Update is called once per frame

@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1466291192282402379, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466291192282402379, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466291192282402379, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: playBehavior
       value: 
@@ -24,6 +36,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Draw an extra card per turn!
       objectReference: {fileID: 0}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1455960789841672943, guid: 51ebf3a6a9c13514383073df84bfe06b, type: 3}
     - target: {fileID: 6268215918380333270, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Sprite
       value: 
