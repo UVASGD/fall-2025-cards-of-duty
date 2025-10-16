@@ -45,6 +45,7 @@ public class Card : MonoBehaviour
     [SerializeField] public GameObject stackText;
     [SerializeField] public GameObject xText;
     [SerializeField] public GameObject cardDescription;
+    public TextMeshProUGUI descriptionText;
     
     /**
      * Destroy this card upon completing an automatic movement (e.g. moving to the discard pile)
@@ -52,6 +53,7 @@ public class Card : MonoBehaviour
     private bool destroyWhenLerpComplete = false;
     
     private string id;
+    private string cardName;
     [SerializeField] private bool starCard = false;
 
     // Behavior scripts
@@ -89,6 +91,7 @@ public class Card : MonoBehaviour
         if (playText) playText.SetActive(false);
         if (stackText) stackText.SetActive(false);
         if (xText) xText.SetActive(false);
+        if (cardDescription) descriptionText = cardDescription.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     public void Show()
@@ -181,6 +184,17 @@ public class Card : MonoBehaviour
     public string GetId()
     {
         return id;
+    }
+    
+    public void SetCardName(string str)
+    {
+        cardName = str;
+        if (descriptionText) descriptionText.SetText(cardName);
+    }
+    
+    public string GetCardName()
+    {
+        return cardName;
     }
 
     public void SetScale(float scale)

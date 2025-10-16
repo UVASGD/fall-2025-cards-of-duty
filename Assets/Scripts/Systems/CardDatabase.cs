@@ -6,16 +6,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "CardDatabase", menuName = "ScriptableObjects/CardDatabase", order = 1)]
 public class CardDatabase : ScriptableObject
 {
-    private static Dictionary<string, GameObject> cardDictionary = new Dictionary<string, GameObject>();
+    [System.NonSerialized] private static Dictionary<string, GameObject> cardDictionary = new Dictionary<string, GameObject>();
+    [System.NonSerialized] private static Dictionary<string, CardIdentifier> cardInfoDictionary = new Dictionary<string, CardIdentifier>();
     public List<CardIdentifier> cardList;
-
+    
     [System.Serializable]
     public class CardIdentifier
     {
         public string id;
         public GameObject card;
-        [TextArea(1, 2)]
-        public string shortDescription;
+        public string name;
         [TextArea(2, 7)]
         public string description;
     }
@@ -24,9 +24,11 @@ public class CardDatabase : ScriptableObject
     {
         if (!cardDictionary.ContainsKey(str)) return null;
         Card card = Instantiate(cardDictionary[str], parent, true).GetComponent<Card>();
+        CardIdentifier info = cardInfoDictionary[str];
         card.transform.localPosition = Vector3.zero;
         card.Hide();
         card.SetId(str);
+        card.SetCardName(info.name);
         return card;
     }
 
@@ -42,6 +44,10 @@ public class CardDatabase : ScriptableObject
         foreach (CardIdentifier cardWrapper in cardList)
         {
             cardDictionary[cardWrapper.id] = cardWrapper.card;
+        }
+        foreach (CardIdentifier cardWrapper in cardList)
+        {
+            cardInfoDictionary[cardWrapper.id] = cardWrapper;
         }
     }
 
