@@ -8,18 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1466291192282402379, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1466291192282402379, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1466291192282402379, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: playBehavior
       value: 
@@ -35,7 +23,11 @@ PrefabInstance:
     - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -4205624841535225538, guid: 61887f5b58666dc4dbd5f9cde0c7927b, type: 3}
+      objectReference: {fileID: 21300000, guid: 61887f5b58666dc4dbd5f9cde0c7927b, type: 3}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6268215918380333270, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Sprite
       value: 

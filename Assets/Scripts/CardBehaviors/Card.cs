@@ -35,8 +35,6 @@ public class Card : MonoBehaviour
     private Vector3 targetTransform = Vector3.zero;
     
     [SerializeField] private Sprite faceDownSprite;
-    // todo temporary
-    [SerializeField] private bool newSizes = false;
     /**
      * This is set to the current sprite in the SpriteRenderer on Awake()
      */
@@ -96,14 +94,11 @@ public class Card : MonoBehaviour
     public void Show()
     {
         spriteRenderer.sprite = faceUpSprite;
-        if (newSizes) spriteRenderer.gameObject.transform.localScale = new Vector3(4.8f, 4.8f, 4.8f);
     }
     
     public void Hide()
     {
         spriteRenderer.sprite = faceDownSprite;
-        // todo temporary
-        spriteRenderer.gameObject.transform.localScale = new Vector3(1, 1, 1);
     }
 
     // Update is called once per frame
