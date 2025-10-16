@@ -14,5 +14,6 @@ namespace Cards
         }
         
         public List<CardEntry> cards;
+        public List<CardEntry> extraDeck;
     }
 }

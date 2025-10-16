@@ -26,6 +26,14 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b5a601e52959ec43b09093c769ba802, type: 3}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6268215918380333270, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Sprite
       value: 

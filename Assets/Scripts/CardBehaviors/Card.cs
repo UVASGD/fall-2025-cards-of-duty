@@ -39,7 +39,8 @@ public class Card : MonoBehaviour
      * This is set to the current sprite in the SpriteRenderer on Awake()
      */
     private Sprite faceUpSprite;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
+    [SerializeField] public GameObject sprite;
     [SerializeField] public GameObject playText;
     [SerializeField] public GameObject stackText;
     [SerializeField] public GameObject xText;
@@ -82,7 +83,7 @@ public class Card : MonoBehaviour
     void Awake()
     {
         player = Player.GetPlayer(this);
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = sprite.GetComponent<SpriteRenderer>();
         faceUpSprite = spriteRenderer.sprite;
         animator = GetComponent<Animator>();
         if (playText) playText.SetActive(false);

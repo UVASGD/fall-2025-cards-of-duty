@@ -24,6 +24,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Annihilate half of your opponent's Deck!
       objectReference: {fileID: 0}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d19e1dba48b90d8439bc99eabd4edaec, type: 3}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6268215918380333270, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -74,7 +82,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      insertIndex: 7
+      insertIndex: -1
       addedObject: {fileID: 1165328531684572238}
   m_SourcePrefab: {fileID: 100100000, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
 --- !u!1 &221227463720467857 stripped

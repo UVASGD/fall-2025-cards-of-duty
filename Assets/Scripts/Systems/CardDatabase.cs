@@ -23,7 +23,7 @@ public class CardDatabase : ScriptableObject
     public static Card InstantiateCard(string str, Transform parent)
     {
         if (!cardDictionary.ContainsKey(str)) return null;
-        Card card = Instantiate(cardDictionary[str], parent).GetComponent<Card>();
+        Card card = Instantiate(cardDictionary[str], parent, true).GetComponent<Card>();
         card.transform.localPosition = Vector3.zero;
         card.Hide();
         card.SetId(str);
