@@ -8,9 +8,12 @@ public class DragCards : MonoBehaviour
     
     private Vector3 offset;
     private InputAction leftClickAction;
+    private InputAction rightClickAction;
     private InputAction mousePositionAction;
     private LayerMask dragMask;
     private LayerMask dropLayermask;
+    
+    public bool disableCardClicks = false;
 
 
     public class CardClickEventData
@@ -33,24 +36,30 @@ public class DragCards : MonoBehaviour
         dragMask = LayerMask.GetMask("Moveable");
         dropLayermask = LayerMask.GetMask("DropableOn");
         leftClickAction = InputSystem.actions.FindAction("LeftClick");
+        rightClickAction = InputSystem.actions.FindAction("RightClick");
         mousePositionAction = InputSystem.actions.FindAction("MousePosition");
     }
     
     void Update()
     {
-        // click
+        // left click
         if (leftClickAction.WasPressedThisFrame() && !draggingCard)
         {
             // This casts a ray into the screen and hits anything that the "dragMask" can hit - usually cards
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePositionAction.ReadValue<Vector2>()), Vector2.zero,
         float.PositiveInfinity, dragMask);
-            HandleHit(hit);
+            HandleLeftHit(hit);
         }
-        // release
+        // left release
         else if (!leftClickAction.IsPressed() && draggingCard != null)
         {
             if (draggingCard != null) OnDrop(draggingCard);
             draggingCard = null;
+        } else if (rightClickAction.WasPressedThisFrame() && !draggingCard)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(mousePositionAction.ReadValue<Vector2>()), Vector2.zero,
+                float.PositiveInfinity, dragMask);
+            HandleRightHit(hit);
         }
 
         if (draggingCard != null)
@@ -59,11 +68,12 @@ public class DragCards : MonoBehaviour
         }
     }
 
-    void HandleHit(RaycastHit2D hit)
+    void HandleLeftHit(RaycastHit2D hit)
     {
         if (!hit) return;
         Card card = hit.transform.GetComponent<Card>();
         if (!card) return;
+        if (disableCardClicks) return;
 
         // Fires an event that can be cancelled by other scripts
         // If the event is cancelled, do not proceed
@@ -121,5 +131,17 @@ public class DragCards : MonoBehaviour
         {
             card.TransformLerp(originalPosition);
         }
+    }
+
+    void HandleRightHit(RaycastHit2D hit)
+    {
+        if (!hit) return;
+        Card card = hit.transform.GetComponent<Card>();
+        if (!card) return;
+        if (disableCardClicks) return;
+
+        // disableCardClicks = true;
+        // card.TransformLerp(new Vector3(-3, 3, 0));
+        // card.ScaleLerp(new Vector3(4, 4, 4));
     }
 }

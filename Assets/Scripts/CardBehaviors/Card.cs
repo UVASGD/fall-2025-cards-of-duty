@@ -28,11 +28,18 @@ public class Card : MonoBehaviour
      */
     private int stacks = 1;
     
-    private bool lerping = true;
+    // todo rename this to "movelerping"
+    private bool lerping = false;
     private float lerpTime = 0;
     private const float lerpDuration = 0.25f;
     private Vector3 startTransform = Vector3.zero;
     private Vector3 targetTransform = Vector3.zero;
+
+    private bool scaleLerping = false;
+    private float scaleLerpTime = 0;
+    private const float scaleLerpDuration = 0.25f;
+    private Vector3 startScale = Vector3.zero;
+    private Vector3 targetScale = Vector3.zero;
     
     [SerializeField] private Sprite faceDownSprite;
     /**
@@ -107,19 +114,36 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!lerping) return;
-        
-        lerpTime += Time.deltaTime;
-        if (lerpTime > lerpDuration) lerpTime = lerpDuration;
-        transform.position = Vector3.Lerp(startTransform, targetTransform, lerpTime/lerpDuration);
-        
-        if (lerpTime < lerpDuration) return;
-        lerping = false;
-        moveable = true;
-        lerpTime = 0;
-        if (destroyWhenLerpComplete)
+        if (lerping)
         {
-            Destroy(gameObject);
+
+            lerpTime += Time.deltaTime;
+            if (lerpTime > lerpDuration) lerpTime = lerpDuration;
+            transform.position = Vector3.Lerp(startTransform, targetTransform, lerpTime / lerpDuration);
+
+            if (lerpTime >= lerpDuration)
+            {
+                lerping = false;
+                moveable = true;
+                lerpTime = 0;
+                if (destroyWhenLerpComplete)
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+        if (scaleLerping)
+        {
+            scaleLerpTime += Time.deltaTime;
+            if (scaleLerpTime > scaleLerpDuration) scaleLerpTime = scaleLerpDuration;
+            transform.localScale = Vector3.Lerp(startScale, targetScale, scaleLerpTime / scaleLerpDuration);
+            
+            if (scaleLerpTime >= scaleLerpDuration)
+            {
+                scaleLerping = false;
+                scaleLerpTime = 0;
+            }
         }
     }
 
@@ -134,6 +158,13 @@ public class Card : MonoBehaviour
         targetTransform = endPosition;
         lerping = true;
         moveable = false;
+    }
+
+    public void ScaleLerp(Vector3 endScale)
+    {
+        startScale = transform.localScale;
+        targetScale = endScale;
+        scaleLerping = true;
     }
 
     public void SetText(string str)
