@@ -282,6 +282,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8536844071002148008}
     m_Modifications:
+    - target: {fileID: 1144781625611730809, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -198.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144781625611730809, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -71.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144781625611730809, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144781625611730809, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 108.7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398371897245389205, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -293,6 +309,30 @@ PrefabInstance:
     - target: {fileID: 4358535311055972341, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018773764311213786, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_text
+      value: Card Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018773764311213786, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018773764311213786, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018773764311213786, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018773764311213786, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069051652882434801, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9112477883034752057, guid: 13340d38c7f5a39478c57699e9374c5e, type: 3}
       propertyPath: m_Pivot.x
