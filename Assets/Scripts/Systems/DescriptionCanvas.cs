@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DescriptionCanvas : MonoBehaviour
@@ -48,12 +49,15 @@ public class DescriptionCanvas : MonoBehaviour
     
     public void Deactivate()
     {
-        targetCard.ScaleLerp(Vector3.one);
+        if (!targetCard.gameObject.IsDestroyed())
+        {
+            targetCard.ScaleLerp(Vector3.one);
+            targetCard.TransformLerp(originalCardLocation);
+            targetCard.ScaleLerp(originalScale);
+            targetCard.GetSpriteRenderer().sortingOrder = originalSortingOrder;
+        }
+        
         dragCardsSystem.disableCardClicks = false;
-        targetCard.TransformLerp(originalCardLocation);
-        targetCard.ScaleLerp(originalScale);
-        targetCard.GetSpriteRenderer().sortingOrder = originalSortingOrder;
-
         targetCard = null;
         gameObject.SetActive(false);
     }
