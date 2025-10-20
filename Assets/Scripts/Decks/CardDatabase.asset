@@ -16,36 +16,46 @@ MonoBehaviour:
   - id: pointCard
     card: {fileID: 5336923753012019729, guid: b5ecd70d279ff7e40afc5cbfd3de8843, type: 3}
     name: Tidal Surge
-    description: Tidal Surge
+    description: Gain +2 Territory when played
   - id: roughSeas
     card: {fileID: 3525493909888871732, guid: 212d2af2478ee634ebd1fe88aa5adcd0, type: 3}
     name: Rough Seas
-    description: Rough Seas
+    description: Draw an additional card at the beginning of your turn while this
+      card is in play
   - id: gordianKnot
     card: {fileID: 1502064289751426024, guid: 0a675fe1ee2051f4ab4af1d671be912d, type: 3}
     name: Gordian Knot
-    description: Gordian Knot
+    description: Discard one card, draw three cards when played
   - id: tsunami
     card: {fileID: 3640460423825029652, guid: d4f7e26af40fea24995d7d2fbd5b7f42, type: 3}
     name: Tsunami
-    description: Tsunami
+    description: Draw one card when played
   - id: fishing
     card: {fileID: 818755621864820076, guid: d03d041ca893e6a47873ae092cd7bc06, type: 3}
     name: Fishing
-    description: Fishing
+    description: When played, exchange this card with a card in your partners hand
+      - you cannot play that card this turn
   - id: highTide
     card: {fileID: 8066543443648394459, guid: 53407f973b28a1a4b8ec8019eba31fbb, type: 3}
     name: High Tide
-    description: 
+    description: "Exchange 2 cards in your hand with 2 of your choice from your partner\u2019s
+      hand when played."
   - id: whirlpool
     card: {fileID: 3122161146418240010, guid: b889a7119e4ace14db04438261e38991, type: 3}
     name: Whirlpool
-    description: 
+    description: Clone every non-star card played while this card is in play. Cloned
+      cards go to your discard pile.
   - id: flood
     card: {fileID: 221227463720467857, guid: 97435c9cd99fe8e42b55cc0a23fe78da, type: 3}
     name: Flood
-    description: 
+    description: 'Annihilate half of your opponents deck (rounded down) and draw
+      that many cards when played.
+
+
+      if your Water Affinity is less than 20
+      at the end of the turn, you lose the game.'
   - id: unbridledPotential
     card: {fileID: 1809483685902439921, guid: 3effaaded21c04748bb069c54a3af55d, type: 3}
     name: Unbridled Potential
-    description: 
+    description: When played, if you have 100 or more cards across your deck, discard,
+      and hand; you win the game

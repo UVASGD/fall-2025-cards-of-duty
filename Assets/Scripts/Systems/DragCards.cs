@@ -141,8 +141,7 @@ public class DragCards : MonoBehaviour
         Card card = hit.transform.GetComponent<Card>();
         if (!card) return;
         if (disableCardClicks) return;
-
-        disableCardClicks = true;
+        
         // todo could use an event system instead
         descriptionCanvas.Activate(card);
     }
