@@ -1,6 +1,7 @@
 using CardBehaviors;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Card : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class Card : MonoBehaviour
     [SerializeField] public GameObject playText;
     [SerializeField] public GameObject stackText;
     [SerializeField] public GameObject xText;
-    [SerializeField] public GameObject cardDescription;
+    [SerializeField] public GameObject cardTitle;
     public TextMeshProUGUI descriptionText;
     
     /**
@@ -61,6 +62,7 @@ public class Card : MonoBehaviour
     
     private string id;
     private string cardName;
+    private string cardDescription;
     [SerializeField] private bool starCard = false;
 
     // Behavior scripts
@@ -98,7 +100,7 @@ public class Card : MonoBehaviour
         if (playText) playText.SetActive(false);
         if (stackText) stackText.SetActive(false);
         if (xText) xText.SetActive(false);
-        if (cardDescription) descriptionText = cardDescription.GetComponentInChildren<TextMeshProUGUI>();
+        if (cardTitle) descriptionText = cardTitle.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     public void Show()
@@ -223,9 +225,19 @@ public class Card : MonoBehaviour
         if (descriptionText) descriptionText.SetText(cardName);
     }
     
+    public void SetCardDescription(string str)
+    {
+        cardDescription = str;
+    }
+    
     public string GetCardName()
     {
         return cardName;
+    }
+    
+    public string GetCardDescription()
+    {
+        return cardDescription;
     }
 
     public void SetScale(float scale)
@@ -366,6 +378,6 @@ public class Card : MonoBehaviour
     
     public void DisplayDescription(bool b)
     {
-        cardDescription.SetActive(b);    
+        cardTitle.SetActive(b);    
     }
 }

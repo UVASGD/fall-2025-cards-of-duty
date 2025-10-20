@@ -29,6 +29,7 @@ public class CardDatabase : ScriptableObject
         card.Hide();
         card.SetId(str);
         card.SetCardName(info.name);
+        card.SetCardDescription(info.description);
         return card;
     }
 

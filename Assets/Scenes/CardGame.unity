@@ -601,6 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9503da42e7be147b5e007d35d7ee65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  descriptionCanvas: {fileID: 2009832192}
   disableCardClicks: 0
 --- !u!4 &359649764
 Transform:
@@ -1400,7 +1401,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 614778449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2009832192}
+        m_TargetAssemblyTypeName: DescriptionCanvas, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &614778449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1974,7 +1987,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -495.6363, w: -21.001545}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2041,7 +2054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.83137256}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.90588236}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4344,7 +4357,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &2009832191
 RectTransform:
@@ -4378,8 +4391,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6819d2d5f55ed7d4298392535216bce9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  absoluteCardLocation: {x: -5, y: 5, z: 0}
+  absoluteCardLocation: {x: -9, y: 1, z: 0}
   cardScale: {x: 4, y: 4, z: 4}
+  dragCardsSystem: {fileID: 359649763}
+  titleText: {fileID: 826590250}
+  descriptionText: {fileID: 823209674}
 --- !u!1 &2052988200
 GameObject:
   m_ObjectHideFlags: 0

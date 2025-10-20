@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class DragCards : MonoBehaviour
 {
+    [SerializeField] public DescriptionCanvas descriptionCanvas;
+    
     private Card draggingCard;
     private Vector3 originalPosition;
     
@@ -140,8 +142,8 @@ public class DragCards : MonoBehaviour
         if (!card) return;
         if (disableCardClicks) return;
 
-        // disableCardClicks = true;
-        // card.TransformLerp(new Vector3(-3, 3, 0));
-        // card.ScaleLerp(new Vector3(4, 4, 4));
+        disableCardClicks = true;
+        // todo could use an event system instead
+        descriptionCanvas.Activate(card);
     }
 }

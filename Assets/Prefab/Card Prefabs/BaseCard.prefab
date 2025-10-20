@@ -104,7 +104,8 @@ MonoBehaviour:
   playText: {fileID: 4967338376846137043}
   stackText: {fileID: 8696169788044995397}
   xText: {fileID: 8792767719370394186}
-  cardDescription: {fileID: 8957784471782679971}
+  cardTitle: {fileID: 8957784471782679971}
+  descriptionText: {fileID: 0}
   starCard: 0
   boardBehavior: {fileID: 7634530972623112191}
   playBehavior: {fileID: 8732013272534210680}
