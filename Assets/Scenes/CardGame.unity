@@ -3327,7 +3327,7 @@ PrefabInstance:
     - target: {fileID: 1871756120163341323, guid: 037082cb1e806bf4b9af5406e9654e37, type: 3}
       propertyPath: staticDeck
       value: 
-      objectReference: {fileID: 11400000, guid: f8f25fe643979f442ac64cf91471482f, type: 2}
+      objectReference: {fileID: 11400000, guid: 6b751eea6eed7c7418b27d4d4640ed74, type: 2}
     - target: {fileID: 1871756120163341323, guid: 037082cb1e806bf4b9af5406e9654e37, type: 3}
       propertyPath: cardCountText
       value: 

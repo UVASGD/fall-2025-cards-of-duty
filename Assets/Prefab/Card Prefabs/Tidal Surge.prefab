@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 3988352577814544394}
     - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Name
-      value: PointCard
+      value: Tidal Surge
       objectReference: {fileID: 0}
     - target: {fileID: 5287540190326765084, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_text
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.PointPlayBehavior
   affinityCost: 0
   affinityType: water
-  pointsToAdd: 0
+  pointsToAdd: 2
 --- !u!114 &7722085650001210813 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7634530972623112191, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}

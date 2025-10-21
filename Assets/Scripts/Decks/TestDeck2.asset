@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c495f357cdda4a8cb68172d5af1e7981, type: 3}
-  m_Name: CPUDeck
-  m_EditorClassIdentifier: 
+  m_Name: TestDeck2
+  m_EditorClassIdentifier: Assembly-CSharp::Cards.CardDeck
   cards:
-  - cardName: tidalSurge
-    count: 12
-  - cardName: tsunami
-    count: 6
-  - cardName: whirlpool
-    count: 1
-  - cardName: roughSeas
-    count: 1
+  - cardName: mrRabbit
+    count: 3
+  - cardName: profSquirrel
+    count: 3
+  - cardName: drMouse
+    count: 3
   extraDeck: []

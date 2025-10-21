@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CardDatabase
   m_EditorClassIdentifier: 
   cardList:
-  - id: pointCard
+  - id: tidalSurge
     card: {fileID: 5336923753012019729, guid: b5ecd70d279ff7e40afc5cbfd3de8843, type: 3}
     name: Tidal Surge
     description: Gain +2 Territory when played
@@ -59,3 +59,41 @@ MonoBehaviour:
     name: Unbridled Potential
     description: When played, if you have 100 or more cards across your deck, discard,
       and hand; you win the game
+  - id: diveBomb
+    card: {fileID: 5154210609912716156, guid: 34f77c184154e11458b23143646e8cfd, type: 3}
+    name: Dive Bomb
+    description: Discard a card from your hand to create a Mecha token when played.
+  - id: drMouse
+    card: {fileID: 9093358569408600491, guid: 9b485aedce2bcdf40936d32996a2ef22, type: 3}
+    name: Dr. Mouse
+    description: Reorder the top 3 cards of your deck when played.
+  - id: dronePidgeon
+    card: {fileID: 2521587051067936555, guid: d8a256cdcd0cdce4489bf72040bdf8a2, type: 3}
+    name: Drone Pidgeon
+    description: At the start of your turn, gain 5 territory while this card is in
+      play.
+  - id: harvest
+    card: {fileID: 2946353156697183242, guid: a482d42a31752c34fbd70edadf0231d8, type: 3}
+    name: Harvest
+    description: Draw a card for each token in play when this played.
+  - id: hullbreaker
+    card: {fileID: 9179142705865582908, guid: 96f063f791b55da43b51f458c5a90e30, type: 3}
+    name: Hullbreaker
+    description: Your opponents lose one territory when this is played.
+  - id: mermaid
+    card: {fileID: 4183835241928779342, guid: dc595cac3c4d37e41a784c5e838bef88, type: 3}
+    name: Mermaid
+    description: Card Annihilation requirements for extra deck play are halved this
+      turn when played.
+  - id: mrRabbit
+    card: {fileID: 3568014493327147044, guid: 51f425e8756038c4e963731846aadddd, type: 3}
+    name: Mr. Rabbit
+    description: Draw 3 cards and then discard 3 cards when this is played.
+  - id: profSquirrel
+    card: {fileID: 9083654712478325424, guid: f2ec79eca913f814a9aa4a5bd5f63d37, type: 3}
+    name: Prof. Squirrel
+    description: Return 3 cards from your discard pile to your hand when played.
+  - id: scrap
+    card: {fileID: 3869663461221368603, guid: 3a3f9c041e22e12499a2d2d323b900b5, type: 3}
+    name: Scrap
+    description: When played, sacrifice a Mecha token, then draw a card.

@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cards:
   - cardName: highTide
-    count: 2
-  - cardName: pointCard
+    count: 0
+  - cardName: tidalSurge
     count: 2
   - cardName: gordianKnot
-    count: 1
+    count: 0
   - cardName: tsunami
     count: 3
   - cardName: roughSeas
-    count: 1
+    count: 0
   - cardName: fishing
     count: 3
   - cardName: whirlpool
@@ -30,4 +30,7 @@ MonoBehaviour:
   - cardName: flood
     count: 1
   - cardName: unbridledPotential
+    count: 0
+  - cardName: hullbreaker
     count: 1
+  extraDeck: []
