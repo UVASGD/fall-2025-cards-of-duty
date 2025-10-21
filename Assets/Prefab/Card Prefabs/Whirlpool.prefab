@@ -120,5 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725e8b873fe547fbbb2e9727c9bb5fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.BoardCardPlayBehavior
-  affinityCost: 0
+  affinityCost: 2
   affinityType: water

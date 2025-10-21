@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7d9186c788a4e7399bcac825fc2c914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.DiscardAndDrawPlayBehavior
-  affinityCost: 0
+  affinityCost: 1
   affinityType: water
   cardsToDiscard: 1
   cardsToDraw: 2
