@@ -79,6 +79,7 @@ public class Hand : MonoBehaviour
      */
     public void AddCard(Card card)
     {
+        if (!card) return;
         var relativePosition = CalculateCardLocation(transform.childCount);
         card.GetSpriteRenderer().sortingOrder = transform.childCount;
         card.transform.SetParent(transform, true);
