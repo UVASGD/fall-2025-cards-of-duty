@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEngine;
 
 namespace CardBehaviors.Implementations
 {
@@ -7,6 +8,8 @@ namespace CardBehaviors.Implementations
         public override IEnumerator Play()
         {
             yield return base.Play();
+            card.playText.SetActive(true);
+            yield return new WaitForSeconds(1);
             card.Discard();
             card.GetPlayer().SetActionable(true);
             yield return 0;
