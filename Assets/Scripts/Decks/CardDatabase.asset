@@ -97,3 +97,7 @@ MonoBehaviour:
     card: {fileID: 3869663461221368603, guid: 3a3f9c041e22e12499a2d2d323b900b5, type: 3}
     name: Scrap
     description: When played, sacrifice a Mecha token, then draw a card.
+  - id: coldWind
+    card: {fileID: 168182240678267550, guid: 55b199d037d0aad40ad3abf72894b173, type: 3}
+    name: Cold Wind
+    description: Your opponent discards one card

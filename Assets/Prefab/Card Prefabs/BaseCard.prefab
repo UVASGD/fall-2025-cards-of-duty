@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7634530972623112191}
   - component: {fileID: 5048545337957502928}
   - component: {fileID: 8732013272534210680}
-  - component: {fileID: 3855203385527233096}
   - component: {fileID: 7508393095543980241}
   m_Layer: 7
   m_Name: BaseCard
@@ -110,7 +109,6 @@ MonoBehaviour:
   boardBehavior: {fileID: 7634530972623112191}
   playBehavior: {fileID: 8732013272534210680}
   visualBehavior: {fileID: 5048545337957502928}
-  discardBehavior: {fileID: 3855203385527233096}
   starCardEffectPrefab: {fileID: 6667211102677102568, guid: f2b7f48d15febfd4d859e6d4b9062ab5, type: 3}
 --- !u!114 &7634530972623112191
 MonoBehaviour:
@@ -150,18 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.DefaultPlayBehavior
   affinityCost: 0
   affinityType: 
---- !u!114 &3855203385527233096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5244891899839244371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 342184fc07f34b909f47266310278273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.DefaultDiscardBehavior
 --- !u!95 &7508393095543980241
 Animator:
   serializedVersion: 7

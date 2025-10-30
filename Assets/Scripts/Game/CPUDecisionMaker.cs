@@ -49,15 +49,19 @@ public class CPUDecisionMaker : MonoBehaviour
         DragCards.HandleLeftClickCPU(player.GetPlayerHand().GetCard(index));
     }
 
-    void OnForceDiscardCard(int count)
+    public void ForceDiscardCard(int count)
     {
         StartCoroutine(DiscardCards(count));
     }
 
     IEnumerator DiscardCards(int count)
     {
+        yield return new WaitForSeconds(0.5f);
+        Debug.Log("Discarding " + count + " cards.");
         for (int i = 0; i < count; i++)
         {
+            if (player.GetPlayerHand().CountCards() == 0) yield break;
+            
             int randomCard = Random.Range(0, player.GetPlayerHand().CountCards());
             player.GetPlayerHand().GetCard(randomCard).Discard();
             yield return new WaitForSeconds(0.5f);

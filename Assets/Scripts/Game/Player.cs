@@ -158,10 +158,15 @@ public class Player : MonoBehaviour
         return turn;
     }
     
-    public Player GetOpponent()
+    public Player GetOpponent1()
     {
-        // todo This needs to check which player is calling this method, and return the opposing party.
-        if (game) return game.GetCpuPlayer1();
+        if (game) return game.GetOpponent1(this);
+        return null;
+    }
+    
+    public Player GetOpponent2()
+    {
+        if (game) return game.GetOpponent2(this);
         return null;
     }
     
@@ -188,6 +193,14 @@ public class Player : MonoBehaviour
     public bool CanSpecialDiscard()
     {
         return specialDiscard;
+    }
+
+    public void CPUSpecialDiscard(int count)
+    {
+        if (cpu)
+        {
+            cpu.ForceDiscardCard(count);
+        }
     }
 
     public void SetStarCardPlayedThisTurn(bool played)

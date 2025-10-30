@@ -24,7 +24,7 @@ namespace CardBehaviors.Implementations
         {
             yield return base.Play();
             Player player = card.GetPlayer();
-            Player opponent = player.GetOpponent();
+            Player opponent = player.GetOpponent1();
             card.playText.SetActive(true);
             if (opponent)
             {

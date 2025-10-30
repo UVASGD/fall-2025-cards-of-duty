@@ -97,6 +97,20 @@ public class Game : MonoBehaviour
     {
         return opponent2;
     }
+
+    public Player GetOpponent1(Player player)
+    {
+        if (player == player1 || player == player2) return opponent1;
+        if (player == opponent1 || player == opponent2) return player1;
+        return null;
+    }
+    
+    public Player GetOpponent2(Player player)
+    {
+        if (player == player1 || player == player2) return opponent2;
+        if (player == opponent1 || player == opponent2) return player2;
+        return null;
+    }
     
     public Player GetActivePlayer()
     {
@@ -128,13 +142,5 @@ public class Game : MonoBehaviour
         staticMessageText.fontSize = 72;
         staticMessageText.overrideColorTags = true;
         staticMessageText.color = Color.goldenRod;
-    }
-
-    // Tells the opponent to discard their own cards
-    public void NotifyOpponentDiscardCards(Player opponent)
-    {
-        if (!opponent) return;
-        opponent.SetSpecialDiscard(true);
-        // todo
     }
 }
