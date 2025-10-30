@@ -89,6 +89,13 @@ public class DragCards : MonoBehaviour
         originalPosition = card.transform.position;
     }
 
+    // CPUs cannot drag cards. This allows them to still fire events.
+    public static void HandleLeftClickCPU(Card card)
+    {
+        CardClickEventData eventData = new CardClickEventData(card);
+        if (CardClickEvent != null) CardClickEvent(eventData);
+    }
+
     void OnDrop(Card card)
     {
         // Casts a ray into the screen and hits anything that the "dropLayermask" can hit
@@ -103,6 +110,13 @@ public class DragCards : MonoBehaviour
         }
         
         Player player = card.GetPlayer();
+        var type = hit.collider.gameObject.GetComponent<MonoBehaviour>().GetType();
+        
+        if (player.CanSpecialDiscard() && type == typeof(DiscardPile))
+        {
+            card.Discard();
+            return;
+        }
         
         if (!player.IsTurn())
         {
@@ -117,7 +131,6 @@ public class DragCards : MonoBehaviour
             return;
         }
         
-        var type = hit.collider.gameObject.GetComponent<MonoBehaviour>().GetType();
         if (type == typeof(PlayingArea) && !card.HasBeenPlayed())
         {
             if (!player.GetPlayingArea().PlayCard(card))

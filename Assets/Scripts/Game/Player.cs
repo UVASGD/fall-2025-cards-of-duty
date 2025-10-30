@@ -30,8 +30,16 @@ public class Player : MonoBehaviour
     public delegate void TurnStartAction(Player player);
     public static event TurnStartAction TurnStartEvent;
     
+    public delegate void PlayerActionableAction(Player player);
+    // Called when a player is actionable again
+    public static event PlayerActionableAction PlayerActionableEvent;
+    
     // Inactionable means that the player cannot make any other moves right now (but their turn isn't over)
     private bool actionable;
+
+    // If true, the player may discard cards even if it's not their turn, but nothing else.
+    // Ensure that this is set to false at the beginning of the player's turn.
+    private bool specialDiscard = true;
     
     [SerializeField] private CPUDecisionMaker cpu;
 
@@ -119,6 +127,7 @@ public class Player : MonoBehaviour
     {
         turn = true;
         actionable = true;
+        specialDiscard = false;
         ResetAffinities();
         
         deck.DrawTopCard();
@@ -132,7 +141,7 @@ public class Player : MonoBehaviour
 
         if (cpu)
         {
-            cpu.Decide(this);
+            cpu.Decide();
         }
     }
 
@@ -153,10 +162,15 @@ public class Player : MonoBehaviour
         return turn;
     }
     
-    public Player GetOpponent()
+    public Player GetOpponent1()
     {
-        // todo This needs to check which player is calling this method, and return the opposing party.
-        if (game) return game.GetCpuPlayer1();
+        if (game) return game.GetOpponent1(this);
+        return null;
+    }
+    
+    public Player GetOpponent2()
+    {
+        if (game) return game.GetOpponent2(this);
         return null;
     }
     
@@ -173,6 +187,25 @@ public class Player : MonoBehaviour
     public void SetActionable(bool a)
     {
         actionable = a;
+        if (actionable && PlayerActionableEvent != null) PlayerActionableEvent(this);
+    }
+    
+    public void SetSpecialDiscard(bool canDiscard)
+    {
+        specialDiscard = canDiscard;
+    }
+    
+    public bool CanSpecialDiscard()
+    {
+        return specialDiscard;
+    }
+
+    public void CPUSpecialDiscard(int count)
+    {
+        if (cpu)
+        {
+            cpu.ForceDiscardCard(count);
+        }
     }
 
     public void SetStarCardPlayedThisTurn(bool played)

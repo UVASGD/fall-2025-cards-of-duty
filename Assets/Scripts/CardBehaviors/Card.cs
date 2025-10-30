@@ -69,7 +69,6 @@ public class Card : MonoBehaviour
     [SerializeField] public BoardBehavior boardBehavior = null;
     [SerializeField] public PlayBehavior playBehavior = null;
     [SerializeField] public VisualBehavior visualBehavior = null;
-    [SerializeField] public DiscardBehavior discardBehavior = null;
     private Animator animator = null;
     
     [SerializeField] private GameObject starCardEffectPrefab = null;
@@ -77,6 +76,9 @@ public class Card : MonoBehaviour
     // todo make this cancellable
     public delegate void PlayAction(Card card);
     public static event PlayAction CardPlayEvent;
+    
+    public delegate void DiscardAction(Card card);
+    public static event DiscardAction CardDiscardEvent;
 
     public void Play()
     {
@@ -88,7 +90,16 @@ public class Card : MonoBehaviour
     
     public void Discard()
     {
-        discardBehavior.Discard();
+        if (CardDiscardEvent != null) CardDiscardEvent(this);
+        transform.SetParent(player.GetDiscardPile().transform, true);
+        player.GetPlayerHand().UpdateCardLocations();
+        player.SetActionable(true);
+        player.GetDiscardPile().PushCard(this);
+            
+        boardBehavior.UnregisterEvents();
+        SetDestroyWhenLerpComplete(true);
+        if (playText) playText.SetActive(false);
+       TransformLerp(player.GetDiscardPile().transform.position);
     }
 
     void Awake()

@@ -17,6 +17,6 @@ MonoBehaviour:
     count: 3
   - cardName: profSquirrel
     count: 3
-  - cardName: drMouse
+  - cardName: coldWind
     count: 3
   extraDeck: []
