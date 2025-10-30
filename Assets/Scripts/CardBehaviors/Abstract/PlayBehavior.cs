@@ -11,10 +11,13 @@ namespace CardBehaviors
         /**
          * This is a coroutine that plays the card.
          * It being a coroutine is important, because it allows for animations to be played.
+         * This also sets the player to not actionable while the card is being played.
+         * Future code must set the player back to actionable when done.
          */
         public virtual IEnumerator Play()
         {
             card.GetPlayer().AddAffinity(affinityType, 1);
+            card.GetPlayer().SetActionable(false);
             yield return 0;
         }
 

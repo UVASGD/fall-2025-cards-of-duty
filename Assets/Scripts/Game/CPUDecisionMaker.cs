@@ -32,15 +32,25 @@ public class CPUDecisionMaker : MonoBehaviour
             int random = Random.Range(0, 100);
             if (random < cards * 5 + 50)
             {
-                int randomCard = UnityEngine.Random.Range(0, player.GetPlayerHand().CountCards());
+                int randomCard = Random.Range(0, player.GetPlayerHand().CountCards());
                 player.GetPlayerHand().PlayCard(randomCard);
-                StartCoroutine(DecideCoroutine());
+                // Wait for the card to complete its play behavior
+                Debug.Log("[CPU] Waiting...");
+                Player.PlayerActionableEvent += OnActionable;
             }
             else
             {
                 Player.GetPlayer(this).TurnOver();
             }
         }
+    }
+    
+    void OnActionable(Player p)
+    {
+        if (p != player) return;
+        Player.PlayerActionableEvent -= OnActionable;
+        Debug.Log("[CPU] Choosing next action...");
+        StartCoroutine(DecideCoroutine());
     }
 
     // For when the CPU needs to select a card. The CPU cannot drag cards.
@@ -57,7 +67,6 @@ public class CPUDecisionMaker : MonoBehaviour
     IEnumerator DiscardCards(int count)
     {
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("Discarding " + count + " cards.");
         for (int i = 0; i < count; i++)
         {
             if (player.GetPlayerHand().CountCards() == 0) yield break;

@@ -30,6 +30,10 @@ public class Player : MonoBehaviour
     public delegate void TurnStartAction(Player player);
     public static event TurnStartAction TurnStartEvent;
     
+    public delegate void PlayerActionableAction(Player player);
+    // Called when a player is actionable again
+    public static event PlayerActionableAction PlayerActionableEvent;
+    
     // Inactionable means that the player cannot make any other moves right now (but their turn isn't over)
     private bool actionable;
 
@@ -183,6 +187,7 @@ public class Player : MonoBehaviour
     public void SetActionable(bool a)
     {
         actionable = a;
+        if (actionable && PlayerActionableEvent != null) PlayerActionableEvent(this);
     }
     
     public void SetSpecialDiscard(bool canDiscard)
