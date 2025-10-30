@@ -7,17 +7,18 @@ using UnityEngine;
  */
 public class CPUDecisionMaker : MonoBehaviour
 {
+    public Player player;
     
-    public void Decide(Player player)
+    public void Decide()
     {
-        StartCoroutine(DecideCoroutine(player));
+        StartCoroutine(DecideCoroutine());
     }
 
     /**
      * If less than 2 cards, end turn.
      * Otherwise, the chance to play a card increases based on number of cards in hand.
      */
-    IEnumerator DecideCoroutine(Player player)
+    IEnumerator DecideCoroutine()
     {
         yield return new WaitForSeconds(2);
         int cards = player.GetPlayerHand().CountCards();
@@ -33,12 +34,33 @@ public class CPUDecisionMaker : MonoBehaviour
             {
                 int randomCard = UnityEngine.Random.Range(0, player.GetPlayerHand().CountCards());
                 player.GetPlayerHand().PlayCard(randomCard);
-                StartCoroutine(DecideCoroutine(player));
+                StartCoroutine(DecideCoroutine());
             }
             else
             {
                 Player.GetPlayer(this).TurnOver();
             }
+        }
+    }
+
+    // For when the CPU needs to select a card. The CPU cannot drag cards.
+    void ClickCard(int index)
+    {
+        DragCards.HandleLeftClickCPU(player.GetPlayerHand().GetCard(index));
+    }
+
+    void OnForceDiscardCard(int count)
+    {
+        StartCoroutine(DiscardCards(count));
+    }
+
+    IEnumerator DiscardCards(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            int randomCard = Random.Range(0, player.GetPlayerHand().CountCards());
+            player.GetPlayerHand().GetCard(randomCard).Discard();
+            yield return new WaitForSeconds(0.5f);
         }
     }
 }

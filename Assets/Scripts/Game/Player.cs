@@ -32,6 +32,10 @@ public class Player : MonoBehaviour
     
     // Inactionable means that the player cannot make any other moves right now (but their turn isn't over)
     private bool actionable;
+
+    // If true, the player may discard cards even if it's not their turn, but nothing else.
+    // Ensure that this is set to false at the beginning of the player's turn.
+    private bool specialDiscard = true;
     
     [SerializeField] private CPUDecisionMaker cpu;
 
@@ -119,6 +123,7 @@ public class Player : MonoBehaviour
     {
         turn = true;
         actionable = true;
+        specialDiscard = false;
         ResetAffinities();
         
         deck.DrawTopCard();
@@ -132,7 +137,7 @@ public class Player : MonoBehaviour
 
         if (cpu)
         {
-            cpu.Decide(this);
+            cpu.Decide();
         }
     }
 
@@ -173,6 +178,16 @@ public class Player : MonoBehaviour
     public void SetActionable(bool a)
     {
         actionable = a;
+    }
+    
+    public void SetSpecialDiscard(bool canDiscard)
+    {
+        specialDiscard = canDiscard;
+    }
+    
+    public bool CanSpecialDiscard()
+    {
+        return specialDiscard;
     }
 
     public void SetStarCardPlayedThisTurn(bool played)

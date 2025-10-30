@@ -129,4 +129,12 @@ public class Game : MonoBehaviour
         staticMessageText.overrideColorTags = true;
         staticMessageText.color = Color.goldenRod;
     }
+
+    // Tells the opponent to discard their own cards
+    public void NotifyOpponentDiscardCards(Player opponent)
+    {
+        if (!opponent) return;
+        opponent.SetSpecialDiscard(true);
+        // todo
+    }
 }
