@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Board
@@ -8,12 +9,18 @@ namespace Board
 
         public delegate void TokenSacrificeAction(string cardID);
         public static event TokenSacrificeAction TokenSacrificeEvent;
-        
+
+        public void Start()
+        {
+            DragCards.CardClickEvent += OnCardClick;
+        }
+
         public void MaterializeToken(string cardID)
         {
             Card token = CardDatabase.InstantiateCard(cardID, transform);
             token.SetPlayer(player);
             token.isToken = true;
+            token.Show();
             if (token.boardBehavior)
             {
                 token.boardBehavior.RegisterEvents();
@@ -49,11 +56,12 @@ namespace Board
             return false;
         }
 
-        public void OnCardClick(DragCards.CardClickEventData data)
+        private void OnCardClick(DragCards.CardClickEventData data)
         {
             Card targetCard = data.card;
             if (!targetCard.GetComponentInParent<Tokens>()) return;
             if (targetCard.GetPlayer() != player) return;
+            if (!player.IsTurn() || !player.IsActionable()) return;
 
             data.cancelled = true;
 

@@ -33,6 +33,7 @@ public class CPUDecisionMaker : MonoBehaviour
             if (random < cards * 5 + 50)
             {
                 int randomCard = Random.Range(0, player.GetPlayerHand().CountCards());
+                // todo prevent cards that can't be played from being chosen
                 player.GetPlayerHand().PlayCard(randomCard);
                 // Wait for the card to complete its play behavior
                 Debug.Log("[CPU] Waiting...");

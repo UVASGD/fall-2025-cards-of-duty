@@ -243,5 +243,10 @@ public class Player : MonoBehaviour
     {
         return affinities.GetValueOrDefault(affinityType, 0);
     }
+    
+    public Tokens GetTokens()
+    {
+        return tokens;
+    }
 
 }

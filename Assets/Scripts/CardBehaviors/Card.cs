@@ -95,6 +95,7 @@ public class Card : MonoBehaviour
         if (CardDiscardEvent != null) CardDiscardEvent(this);
         transform.SetParent(player.GetDiscardPile().transform, true);
         player.GetPlayerHand().UpdateCardLocations();
+        // todo it's not true that when a card is discarded it should always result in the player being actionable again
         player.SetActionable(true);
         player.GetDiscardPile().PushCard(this);
             
