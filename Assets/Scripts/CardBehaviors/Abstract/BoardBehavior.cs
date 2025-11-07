@@ -11,5 +11,10 @@ namespace CardBehaviors
         // Register events here
         public abstract void RegisterEvents();
         public abstract void UnregisterEvents();
+
+        public virtual void OnSacrifice()
+        {
+            
+        }
     }
 }

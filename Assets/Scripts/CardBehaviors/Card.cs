@@ -72,6 +72,8 @@ public class Card : MonoBehaviour
     private Animator animator = null;
     
     [SerializeField] private GameObject starCardEffectPrefab = null;
+
+    public bool isToken = false;
     
     // todo make this cancellable
     public delegate void PlayAction(Card card);
