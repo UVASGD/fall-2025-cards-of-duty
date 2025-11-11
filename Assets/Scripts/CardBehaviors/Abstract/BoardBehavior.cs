@@ -14,7 +14,7 @@ namespace CardBehaviors
 
         public virtual void OnSacrifice()
         {
-            
+            Destroy(card.gameObject);
         }
     }
 }

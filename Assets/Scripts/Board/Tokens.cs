@@ -72,9 +72,6 @@ namespace Board
                 targetCard.boardBehavior.OnSacrifice();
                 targetCard.boardBehavior.UnregisterEvents();
             }
-            if (TokenSacrificeEvent != null) TokenSacrificeEvent(targetCard.GetId());
-            Destroy(targetCard.gameObject);
-            
         }
     }
 }
