@@ -120,3 +120,7 @@ MonoBehaviour:
       this token is sacrified, destroy a target card of your choice.
 
 '
+  - id: assemblyLine
+    card: {fileID: 7151725276351277364, guid: 08bcef249a468ff4da6e2fd6196a02b4, type: 3}
+    name: Assembly Line
+    description: Create two Mecha Tokens when this card is played.

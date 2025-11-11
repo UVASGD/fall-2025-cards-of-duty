@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &9041634921844927304
+--- !u!1001 &3137198438608028007
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,21 +11,11 @@ PrefabInstance:
     - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: playBehavior
       value: 
-      objectReference: {fileID: -3006778977234180355}
+      objectReference: {fileID: -6770742874962795572}
     - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Name
-      value: Scrap
+      value: Assembly Line
       objectReference: {fileID: 0}
-    - target: {fileID: 5287540190326765084, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      propertyPath: m_text
-      value: 'Scrap
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 8096459312978753757, guid: 0a1e6b07f1e6b2f47865fd362d6da348, type: 3}
     - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -66,35 +56,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8732013272534210680, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      propertyPath: affinityType
-      value: mecha
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -3006778977234180355}
+      addedObject: {fileID: -6770742874962795572}
   m_SourcePrefab: {fileID: 100100000, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
---- !u!1 &3869663461221368603 stripped
+--- !u!1 &7151725276351277364 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-  m_PrefabInstance: {fileID: 9041634921844927304}
+  m_PrefabInstance: {fileID: 3137198438608028007}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-3006778977234180355
+--- !u!114 &-6770742874962795572
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3869663461221368603}
+  m_GameObject: {fileID: 7151725276351277364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea929b1d62c4c3e9c8bddfd50a413ff, type: 3}
+  m_Script: {fileID: 11500000, guid: e226e130d8ba4c9792bf60cf77bf2ea7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.SacrificeForDrawPlayBehavior
+  m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.CreateTokenPlayBehavior
   affinityCost: 0
   affinityType: 
-  possibleTokenIDs: []
+  tokenCardID: genericMechaToken
+  count: 2
+  drawCard: 1
