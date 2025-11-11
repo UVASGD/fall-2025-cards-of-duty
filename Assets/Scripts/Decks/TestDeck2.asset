@@ -13,10 +13,8 @@ MonoBehaviour:
   m_Name: TestDeck2
   m_EditorClassIdentifier: Assembly-CSharp::Cards.CardDeck
   cards:
-  - cardName: mrRabbit
+  - cardName: recycle
     count: 3
-  - cardName: profSquirrel
-    count: 3
-  - cardName: coldWind
+  - cardName: gust
     count: 3
   extraDeck: []

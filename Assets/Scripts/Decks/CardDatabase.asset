@@ -105,3 +105,11 @@ MonoBehaviour:
     card: {fileID: 8591856428678354942, guid: 868e1dafcd4b33842a4ddcbda760cff2, type: 3}
     name: Gust
     description: Creates one Mecha token when played.
+  - id: genericMechaToken
+    card: {fileID: 7049720792169661573, guid: 92728d0c8e5543e43a88c57b7c8ad196, type: 3}
+    name: Generic Mecha Token
+    description: Doesn't do anything on its own.
+  - id: recycle
+    card: {fileID: 6640419461934872528, guid: 12638c1034d98ad499e20d6297026d64, type: 3}
+    name: Recycle
+    description: Sacrifice one Mecha Token to gain 5 territory when played.

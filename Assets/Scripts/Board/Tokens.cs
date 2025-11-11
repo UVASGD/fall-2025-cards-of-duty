@@ -58,12 +58,14 @@ namespace Board
 
         private void OnCardClick(DragCards.CardClickEventData data)
         {
+            if (data.cancelled) return;
             Card targetCard = data.card;
             if (!targetCard.GetComponentInParent<Tokens>()) return;
             if (targetCard.GetPlayer() != player) return;
-            if (!player.IsTurn() || !player.IsActionable()) return;
+            if (!player.IsTurn()) return;
 
             data.cancelled = true;
+            if (TokenSacrificeEvent != null) TokenSacrificeEvent(targetCard.GetId());
 
             if (targetCard.boardBehavior)
             {

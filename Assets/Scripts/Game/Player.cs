@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     public static event PlayerActionableAction PlayerActionableEvent;
     
     // Inactionable means that the player cannot make any other moves right now (but their turn isn't over)
+    // todo change this to "card being played" state
     private bool actionable;
 
     // If true, the player may discard cards even if it's not their turn, but nothing else.
