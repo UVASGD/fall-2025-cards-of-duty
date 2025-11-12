@@ -67,11 +67,6 @@ MonoBehaviour:
     card: {fileID: 9093358569408600491, guid: 9b485aedce2bcdf40936d32996a2ef22, type: 3}
     name: Dr. Mouse
     description: Reorder the top 3 cards of your deck when played.
-  - id: dronePidgeon
-    card: {fileID: 2521587051067936555, guid: d8a256cdcd0cdce4489bf72040bdf8a2, type: 3}
-    name: Drone Pidgeon
-    description: At the start of your turn, gain 5 territory while this card is in
-      play.
   - id: harvest
     card: {fileID: 2946353156697183242, guid: a482d42a31752c34fbd70edadf0231d8, type: 3}
     name: Harvest

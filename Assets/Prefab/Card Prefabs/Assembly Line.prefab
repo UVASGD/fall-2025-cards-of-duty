@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assembly Line
       objectReference: {fileID: 0}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2139001017027348178, guid: 0664f603bae2b7a45a647af42df71d10, type: 3}
     - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

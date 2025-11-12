@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cold Wind
       objectReference: {fileID: 0}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8879323301742823316, guid: db568205cbd7bf34cb57c68f7527dec0, type: 3}
     - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
