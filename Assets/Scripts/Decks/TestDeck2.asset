@@ -17,4 +17,6 @@ MonoBehaviour:
     count: 3
   - cardName: gust
     count: 3
+  - cardName: returnToOil
+    count: 3
   extraDeck: []

@@ -119,3 +119,7 @@ MonoBehaviour:
     card: {fileID: 7151725276351277364, guid: 08bcef249a468ff4da6e2fd6196a02b4, type: 3}
     name: Assembly Line
     description: Create two Mecha Tokens when this card is played.
+  - id: returnToOil
+    card: {fileID: 7349447070644326178, guid: 6143abb2d6b30264989eeb2888f5f09e, type: 3}
+    name: Return To Oil
+    description: Sacrifice one Mecha token to take one of your partner's cards.
