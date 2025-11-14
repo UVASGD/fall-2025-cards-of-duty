@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TestDeck2
   m_EditorClassIdentifier: Assembly-CSharp::Cards.CardDeck
   cards:
-  - cardName: recycle
+  - cardName: bury
     count: 3
   - cardName: gust
     count: 3
