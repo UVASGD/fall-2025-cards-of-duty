@@ -123,3 +123,7 @@ MonoBehaviour:
     card: {fileID: 7349447070644326178, guid: 6143abb2d6b30264989eeb2888f5f09e, type: 3}
     name: Return To Oil
     description: Sacrifice one Mecha token to take one of your partner's cards.
+  - id: duplication
+    card: {fileID: 7954569092449880301, guid: 5cace3303b4878d4fa5fc58a512e05e9, type: 3}
+    name: Duplication
+    description: Sacrifice one Mecha token to create two Mecha tokens.
