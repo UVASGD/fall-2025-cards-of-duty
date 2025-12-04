@@ -89,4 +89,4 @@ MonoBehaviour:
   affinityType: 
   tokenCardID: genericMechaToken
   count: 2
-  drawCard: 1
+  drawCard: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1103089821843747631
+--- !u!1001 &5567943313486268833
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,21 +11,11 @@ PrefabInstance:
     - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: playBehavior
       value: 
-      objectReference: {fileID: -2884088288946975643}
+      objectReference: {fileID: -3553935897702163274}
     - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Name
-      value: Dive Bomb
+      value: Sharing is Caring
       objectReference: {fileID: 0}
-    - target: {fileID: 5287540190326765084, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      propertyPath: m_text
-      value: 'Dive Bomb
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -6754142900083832910, guid: 7720c532e24f1f94a83d96a9172d6947, type: 3}
     - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -66,36 +56,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8732013272534210680, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      propertyPath: affinityType
-      value: mecha
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2884088288946975643}
+      addedObject: {fileID: -3553935897702163274}
   m_SourcePrefab: {fileID: 100100000, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
---- !u!1 &5154210609912716156 stripped
+--- !u!1 &399931503739511282 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-  m_PrefabInstance: {fileID: 1103089821843747631}
+  m_PrefabInstance: {fileID: 5567943313486268833}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2884088288946975643
+--- !u!114 &-3553935897702163274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5154210609912716156}
+  m_GameObject: {fileID: 399931503739511282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e9c00a20e14ca39e80b032b4a918b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 77fd8cbc452746459620d43ede6d8517, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.CreateTokenDiscardPlayBehavior
+  m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.ExchangeAnyPlayBehavior
   affinityCost: 0
   affinityType: 
-  tokenCardID: genericMechaToken
-  count: 1
+  selfCardCount: 1
+  teammateCardCount: 1

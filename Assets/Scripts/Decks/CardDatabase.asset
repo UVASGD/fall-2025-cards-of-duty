@@ -131,3 +131,7 @@ MonoBehaviour:
     card: {fileID: 5022115187771295865, guid: d78fa9431ed3f064ba395e90299fd2b5, type: 3}
     name: Bury
     description: When played, take the top card of your deck and discard it.
+  - id: sharingIsCaring
+    card: {fileID: 399931503739511282, guid: ad67a343f58a7014da04af9394884731, type: 3}
+    name: Sharing is Caring
+    description: Exchange one card with your teammate when played.

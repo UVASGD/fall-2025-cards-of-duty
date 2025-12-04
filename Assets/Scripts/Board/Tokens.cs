@@ -55,6 +55,11 @@ namespace Board
             }
             return false;
         }
+        
+        public int TokenCount()
+        {
+            return transform.childCount;
+        }
 
         private void OnCardClick(DragCards.CardClickEventData data)
         {

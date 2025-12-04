@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c495f357cdda4a8cb68172d5af1e7981, type: 3}
+  m_Name: Water
+  m_EditorClassIdentifier: Assembly-CSharp::Cards.CardDeck
+  cards:
+  - cardName: unbridledPotential
+    count: 1
+  - cardName: gordianKnot
+    count: 1
+  - cardName: flood
+    count: 1
+  - cardName: whirlpool
+    count: 1
+  - cardName: roughSeas
+    count: 1
+  - cardName: siphon
+    count: 1
+  - cardName: tsunami
+    count: 3
+  - cardName: highTide
+    count: 2
+  - cardName: tidalSurge
+    count: 2
+  - cardName: sharkBite
+    count: 1
+  - cardName: hullbreaker
+    count: 1
+  - cardName: fishing
+    count: 3
+  - cardName: fishing
+    count: 3
+  extraDeck: []

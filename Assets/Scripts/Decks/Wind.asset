@@ -10,9 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c495f357cdda4a8cb68172d5af1e7981, type: 3}
-  m_Name: TestDeck2
+  m_Name: Wind
   m_EditorClassIdentifier: Assembly-CSharp::Cards.CardDeck
   cards:
+  - cardName: harvest
+    count: 1
+  - cardName: riseOfGaruda
+    count: 1
+  - cardName: gust
+    count: 2
+  - cardName: assemblyLine
+    count: 2
+  - cardName: recycle
+    count: 2
+  - cardName: scrap
+    count: 2
+  - cardName: returnToOil
+    count: 1
+  - cardName: duplication
+    count: 1
   - cardName: diveBomb
-    count: 3
-  extraDeck: []
+    count: 1
+  - cardName: prettyBird
+    count: 2
+  extraDeck:
+  - cardName: garuda
+    count: 1
