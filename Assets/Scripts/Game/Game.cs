@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Game : MonoBehaviour
 
     [SerializeField] private CardDatabase cardDatabase = null;
     [SerializeField] private TextMeshProUGUI messageText = null;
+    [SerializeField] private string mainMenuSceneName = "MainMenu";
     /**
      * Text for displaying messages to the player.
      * This is static so it can be accessed from anywhere.
@@ -142,5 +144,23 @@ public class Game : MonoBehaviour
         staticMessageText.fontSize = 72;
         staticMessageText.overrideColorTags = true;
         staticMessageText.color = Color.goldenRod;
+    }
+    
+    public void BackToMainMenu()
+    {
+        if (string.IsNullOrEmpty(mainMenuSceneName))
+        {
+            Debug.LogError("Main menu scene name is not set in the Credits script! Please set the scene name in the inspector.");
+            return;
+        }
+
+        try
+        {
+            SceneManager.LoadScene(mainMenuSceneName);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Failed to load main menu scene: {e.Message}\nPlease check if the scene name '{mainMenuSceneName}' exists in your build settings.");
+        }
     }
 }

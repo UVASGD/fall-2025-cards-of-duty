@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006869dd4e834e7408cd371da494b7b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameplaySceneName: CardGame
+  gameplaySceneName: DeckSelection
   creditsSceneName: Credits
 --- !u!1 &832575517
 GameObject:
