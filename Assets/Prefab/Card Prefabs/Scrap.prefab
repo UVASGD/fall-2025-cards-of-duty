@@ -97,4 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.SacrificeForDrawPlayBehavior
   affinityCost: 0
   affinityType: 
-  possibleTokenIDs: []
+  possibleTokenIDs:
+  - genericMechaToken
+  - dronePidgeon

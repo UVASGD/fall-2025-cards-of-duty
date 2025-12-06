@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: discardBehavior
       value: 
-      objectReference: {fileID: 3988352577814544394}
+      objectReference: {fileID: 0}
     - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Name
       value: Tidal Surge
@@ -116,20 +116,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      insertIndex: 6
+      insertIndex: -1
       addedObject: {fileID: 3679565443135959527}
   m_SourcePrefab: {fileID: 100100000, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
---- !u!114 &3988352577814544394 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3855203385527233096, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-  m_PrefabInstance: {fileID: 205220015901616706}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5336923753012019729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 342184fc07f34b909f47266310278273, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.DefaultDiscardBehavior
 --- !u!114 &4956527743957525906 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5048545337957502928, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}

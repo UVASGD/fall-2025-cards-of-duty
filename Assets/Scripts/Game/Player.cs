@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     public Dictionary<string, int> affinities = new Dictionary<string, int>();
     private bool starCardPlayedThisTurn = false;
     private int minAffinityThisTurn = 0;
+    private bool doubleTerritoryBonus = false;
 
     public delegate void TurnStartAction(Player player);
     public static event TurnStartAction TurnStartEvent;
@@ -86,6 +87,11 @@ public class Player : MonoBehaviour
     public void AddScore(int delta)
     {
         if (score < 0) return;
+        if (doubleTerritoryBonus)
+        {
+            delta *= 2;
+            Game.Log("Territory gain doubled!");
+        }
         score += delta;
         scoreText.text = $"Territory: {score}";
         
@@ -159,12 +165,18 @@ public class Player : MonoBehaviour
     {
         minAffinityThisTurn = minAffinity;
     }
+    
+    public void SetTerritoryBonusDoubleThisTurn(bool doubleBonus)
+    {
+        doubleTerritoryBonus = doubleBonus;
+    }
 
     public void TurnOver()
     {
         turn = false;
         starCardPlayedThisTurn = false;
         actionable = true;
+        doubleTerritoryBonus = false;
         
         // hand.MergeCards();
         hand.UpdateCardLocations();

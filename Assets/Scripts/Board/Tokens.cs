@@ -17,13 +17,53 @@ namespace Board
 
         public void MaterializeToken(string cardID)
         {
+            Hand.Alignment alignment = player.GetPlayerHand().alignment;
+            Vector3 offset = Vector3.zero;
+            if (alignment == Hand.Alignment.Left)
+            {
+                offset = new Vector3(1.5f * transform.childCount, 0, 0);
+            }
+            else
+            {
+                offset = new Vector3(-1.5f * transform.childCount, 0, 0);
+            }
+            
+            
             Card token = CardDatabase.InstantiateCard(cardID, transform);
+            token.transform.localPosition += offset;
             token.SetPlayer(player);
             token.isToken = true;
             token.Show();
             if (token.boardBehavior)
             {
                 token.boardBehavior.RegisterEvents();
+            }
+            
+            UpdatePositions();
+        }
+
+        public void UpdatePositions()
+        {
+            Hand.Alignment alignment = player.GetPlayerHand().alignment;
+            
+            for (var i = 0; i < transform.childCount; i++)
+            {
+                var card = transform.GetChild(i).GetComponent<Card>();
+                if (!card) continue;
+                
+                Vector3 offset = Vector3.zero;
+                if (alignment == Hand.Alignment.Left)
+                {
+                    offset = new Vector3(1.5f * i, 0, 0);
+                }
+                else
+                {
+                    offset = new Vector3(-1.5f * i, 0, 0);
+                }
+
+                var newPosition = transform.position + offset;
+                card.TransformLerp(newPosition);
+                card.GetSpriteRenderer().sortingOrder = i;
             }
         }
 

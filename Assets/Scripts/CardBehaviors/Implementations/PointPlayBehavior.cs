@@ -8,7 +8,7 @@ namespace CardBehaviors.Implementations
      */
     public class PointPlayBehavior : PlayBehavior
     {
-        [SerializeField] private int pointsToAdd;
+        [SerializeField] private int pointsToAdd = 4;
         
         public override IEnumerator Play()
         {
