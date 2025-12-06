@@ -29,7 +29,7 @@ namespace CardBehaviors.Implementations
             card.playText.SetActive(true);
             player.AddScore(pointsToAdd);
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             
             card.Discard();
             player.SetActionable(true);

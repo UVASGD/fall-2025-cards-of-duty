@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -30,6 +31,8 @@ public class DiscardPile : MonoBehaviour
         lastCount = discardedCards.Count;
         UpdateText();
     }
+    
+    
 
     // void OnMouseDown()
     // {
@@ -64,6 +67,25 @@ public class DiscardPile : MonoBehaviour
     public Stack<string> GetDiscardedCards()
     {
         return discardedCards;
+    }
+    
+    public string PopRandomCardId()
+    {
+        if (discardedCards.Count == 0)
+        {
+            Game.Log("Deck is empty - can't pop a random card!");
+            return null;
+        }
+        
+        var list = discardedCards.ToList();
+        var random = new System.Random();
+        int index = random.Next(list.Count);
+        string cardId = list[index];
+        list.RemoveAt(index);
+        
+        discardedCards = new Stack<string>(list.Reverse<string>());
+        
+        return cardId;
     }
     
     public void ClearDiscardPile()

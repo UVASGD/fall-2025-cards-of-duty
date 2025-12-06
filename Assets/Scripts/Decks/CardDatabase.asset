@@ -135,6 +135,15 @@ MonoBehaviour:
     card: {fileID: 399931503739511282, guid: ad67a343f58a7014da04af9394884731, type: 3}
     name: Sharing is Caring
     description: Exchange one card with your teammate when played.
+  - id: siphon
+    card: {fileID: 2429403668188364163, guid: 5702281170d05054ca4a37bf59e3463b, type: 3}
+    name: Siphon
+    description: Your partner does not draw a card during their next turn, draw two
+      additional cards during your next turn
+  - id: aNiceDinner
+    card: {fileID: 8727239878425552520, guid: 873226984e63fa448b48f346b91a2f4f, type: 3}
+    name: A Nice Dinner
+    description: 'Board card: At the start of your turn gain 5 territory'
   deckList:
   - id: water
     deck: {fileID: 11400000, guid: ccf364695fdf22448ba822f2c7ea99fd, type: 2}

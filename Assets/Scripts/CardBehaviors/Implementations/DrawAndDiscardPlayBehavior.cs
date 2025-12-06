@@ -6,7 +6,7 @@ namespace CardBehaviors.Implementations
     /**
      * Prompts the player to choose cards to discard, then draws new cards.
      */
-    public class DiscardAndDrawPlayBehavior : PlayBehavior
+    public class DrawAndDiscardPlayBehavior : PlayBehavior
     {
         [SerializeField] private int cardsToDiscard = 1;
         [SerializeField] private int cardsToDraw = 2;
@@ -37,9 +37,14 @@ namespace CardBehaviors.Implementations
             yield return base.Play();
             Player player = card.GetPlayer();
             player.SetActionable(false);
-            player.SetStarCardPlayedThisTurn(true);
             card.SetText($"Discard {cardsToDiscard}\nDraw {cardsToDraw}");
             card.playText.SetActive(true);
+            
+            for (int i = 0; i < cardsToDraw; i++)
+            {
+                player.GetDeck().DrawTopCard();
+                yield return new WaitForSeconds(0.5f);
+            }
             Game.Log($"Click {cardsToDiscard} card(s) in your hand to discard.");
             DragCards.CardClickEvent += OnCardClick;
             yield return 0;
@@ -60,25 +65,13 @@ namespace CardBehaviors.Implementations
             }
             else
             {
+                Game.Log("");
                 DragCards.CardClickEvent -= OnCardClick;
-                StartCoroutine(DrawAndEnd());
+                card.Discard();
+                player.SetActionable(true);
+                card.playText.SetActive(false);
+                cardsDiscarded = 0;
             }
-        }
-
-        IEnumerator DrawAndEnd()
-        {
-            Game.Log("");
-            yield return new WaitForSeconds(0.5f);
-            Player player = card.GetPlayer();
-            for (int i = 0; i < cardsToDraw; i++)
-            {
-                player.GetDeck().DrawTopCard();
-                yield return new WaitForSeconds(0.5f);
-            }
-            card.Discard();
-            player.SetActionable(true);
-            card.playText.SetActive(false);
-            cardsDiscarded = 0;
         }
     }
 }

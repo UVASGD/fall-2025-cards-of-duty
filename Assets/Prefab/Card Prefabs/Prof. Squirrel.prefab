@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: playBehavior
+      value: 
+      objectReference: {fileID: -2362268116807712539}
     - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Name
       value: Prof. Squirrel
@@ -69,5 +73,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2362268116807712539}
   m_SourcePrefab: {fileID: 100100000, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+--- !u!1 &9083654712478325424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+  m_PrefabInstance: {fileID: 3946849482874761955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2362268116807712539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9083654712478325424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5d4b468cb44483389450e6be32ce058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.ReturnFromDiscardPlayBehavior
+  affinityCost: 0
+  affinityType: 
+  cardsToReturn: 3

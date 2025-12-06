@@ -8,13 +8,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: playBehavior
+      value: 
+      objectReference: {fileID: -7173889080620308855}
     - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Name
       value: Siphon
       objectReference: {fileID: 0}
     - target: {fileID: 5287540190326765084, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_text
-      value: Siphon
+      value: Draw 2 extra next turn, but your teammate can't draw on their turn!
       objectReference: {fileID: 0}
     - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Sprite
@@ -71,5 +75,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7173889080620308855}
   m_SourcePrefab: {fileID: 100100000, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+--- !u!1 &2429403668188364163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+  m_PrefabInstance: {fileID: 7601900967161238992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7173889080620308855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429403668188364163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3baa98f3219d4f05b2f0b5bff06c8f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.SiphonPlayBehavior
+  affinityCost: 0
+  affinityType: 

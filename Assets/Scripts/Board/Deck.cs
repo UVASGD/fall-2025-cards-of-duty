@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using Cards;
 using TMPro;
 
@@ -153,6 +154,25 @@ public class Deck : MonoBehaviour
         discardPile.ClearDiscardPile();
         ShuffleDeck();
         Game.Log("Discard pile shuffled into deck!");
+    }
+
+    public string PopRandomCardId()
+    {
+        if (cardIds.Count == 0)
+        {
+            Game.Log("Deck is empty - can't pop a random card!");
+            return null;
+        }
+        
+        var list = cardIds.ToList();
+        var random = new System.Random();
+        int index = random.Next(list.Count);
+        string cardId = list[index];
+        list.RemoveAt(index);
+        
+        cardIds = new Stack<string>(list.Reverse<string>());
+        
+        return cardId;
     }
 
     public int Count()

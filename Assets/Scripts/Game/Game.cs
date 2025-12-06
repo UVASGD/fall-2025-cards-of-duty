@@ -96,8 +96,8 @@ public class Game : MonoBehaviour
         
         activePlayerIndex++;
         if (activePlayerIndex >= turnOrder.Count) activePlayerIndex = 0;
-        turnOrder[activePlayerIndex].TurnStart();
         Game.Log(turnOrder[activePlayerIndex].name + "'s turn");
+        turnOrder[activePlayerIndex].TurnStart();
     }
 
     public Player GetPlayer1()

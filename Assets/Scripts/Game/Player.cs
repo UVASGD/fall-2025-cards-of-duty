@@ -26,6 +26,8 @@ public class Player : MonoBehaviour
     // [SerializeField] private AffinityDisplay affinityDisplay = null;
     
     private bool turn;
+    public bool doNotDrawNextTurn = false;
+    public bool drawExtraNextTurn = false;
     public Dictionary<string, int> affinities = new Dictionary<string, int>();
     private bool starCardPlayedThisTurn = false;
     private int minAffinityThisTurn = 0;
@@ -146,7 +148,14 @@ public class Player : MonoBehaviour
         specialDiscard = false;
         ResetAffinities();
         
-        deck.DrawTopCard();
+        if (!doNotDrawNextTurn) deck.DrawTopCard();
+        if (drawExtraNextTurn)
+        {
+            for (int i = 0; i < 2; i++) deck.DrawTopCard();
+        }
+        
+        doNotDrawNextTurn = false;
+        drawExtraNextTurn = false;
 
         if (endTurnButton)
         {
