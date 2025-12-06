@@ -8,15 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CardGame.unity
     guid: a42dc656f79a77849aaf83ea476490c9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 6ea25c7acf7ee6a40a72218767481b36
   - enabled: 0
     path: Assets/Scenes/Gameplay.unity
     guid: 076b74c05c3d8c8428f2d1571391ff99
+  - enabled: 1
+    path: Assets/Scenes/DeckSelection.unity
+    guid: 93364bf19b7f8c34d9560e9b70091580
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

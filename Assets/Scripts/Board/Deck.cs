@@ -23,6 +23,13 @@ public class Deck : MonoBehaviour
         LoadDeck();
         SetPlayer();
     }
+    
+    public void SetStaticDeck(CardDeck deck)
+    {
+        staticDeck = deck;
+        LoadDeck();
+        UpdateText();
+    }
 
     public void SetPlayer()
     {

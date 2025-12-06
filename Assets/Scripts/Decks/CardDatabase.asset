@@ -135,3 +135,10 @@ MonoBehaviour:
     card: {fileID: 399931503739511282, guid: ad67a343f58a7014da04af9394884731, type: 3}
     name: Sharing is Caring
     description: Exchange one card with your teammate when played.
+  deckList:
+  - id: water
+    deck: {fileID: 11400000, guid: ccf364695fdf22448ba822f2c7ea99fd, type: 2}
+  - id: wind
+    deck: {fileID: 11400000, guid: 44953ebc5d900cb4e90dd5fea58f0a6c, type: 2}
+  - id: earth
+    deck: {fileID: 11400000, guid: 462cb1b78e5a0e743be9111f41022db3, type: 2}

@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using Systems;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class Game : MonoBehaviour
 
     [SerializeField] private CardDatabase cardDatabase = null;
     [SerializeField] private TextMeshProUGUI messageText = null;
+    [SerializeField] private string mainMenuSceneName = "MainMenu";
     /**
      * Text for displaying messages to the player.
      * This is static so it can be accessed from anywhere.
@@ -43,6 +46,25 @@ public class Game : MonoBehaviour
         if (player2) player2.SetGame(this);
         if (opponent1) opponent1.SetGame(this);
         if (opponent2) opponent2.SetGame(this);
+
+        if (GameInformation.IsLoaded())
+        {
+            if (player1)
+            {
+                string deckName = GameInformation.GetPlayer1Deck();
+                player1.GetDeck().SetStaticDeck(CardDatabase.GetDeckById(deckName));
+            }
+            if (player2)
+            {
+                string deckName = GameInformation.GetPlayer2Deck();
+                player2.GetDeck().SetStaticDeck(CardDatabase.GetDeckById(deckName));
+            }
+            if (opponent1)
+            {
+                string deckName = GameInformation.GetCpuDeck();
+                opponent1.GetDeck().SetStaticDeck(CardDatabase.GetDeckById(deckName));
+            }
+        }
         
         if (!player1 && !player2) 
         {
@@ -142,5 +164,23 @@ public class Game : MonoBehaviour
         staticMessageText.fontSize = 72;
         staticMessageText.overrideColorTags = true;
         staticMessageText.color = Color.goldenRod;
+    }
+    
+    public void BackToMainMenu()
+    {
+        if (string.IsNullOrEmpty(mainMenuSceneName))
+        {
+            Debug.LogError("Main menu scene name is not set in the Credits script! Please set the scene name in the inspector.");
+            return;
+        }
+
+        try
+        {
+            SceneManager.LoadScene(mainMenuSceneName);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Failed to load main menu scene: {e.Message}\nPlease check if the scene name '{mainMenuSceneName}' exists in your build settings.");
+        }
     }
 }
