@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
@@ -77,6 +78,7 @@ public class Deck : MonoBehaviour
         }
         Card card = CardDatabase.InstantiateCard(cardIds.Pop(), transform);
         player.GetPlayerHand().AddCard(card);
+        StartCoroutine(UpdateTexture());
         return card;
     }
 
@@ -93,13 +95,29 @@ public class Deck : MonoBehaviour
             ShuffleDiscardPileIntoDeck(player.GetDiscardPile());
         }
         Card card = CardDatabase.InstantiateCard(cardIds.Pop(), transform);
+        StartCoroutine(UpdateTexture());
         return card;
+    }
+
+    public IEnumerator UpdateTexture()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (cardIds.Count == 0)
+        {
+            spriteRenderer.sprite = null;
+            yield return null;
+        }
+        string id = cardIds.Peek();
+        Card card = CardDatabase.GetPrefab(id).GetComponent<Card>();
+        spriteRenderer.sprite = card.faceDownSprite;
+        yield return null;
     }
     
     public void PlaceCardOnTop(string cardId)
     {
         cardIds.Push(cardId);
         UpdateText();
+        StartCoroutine(UpdateTexture());
     }
 
     public void LoadDeck()
@@ -171,7 +189,6 @@ public class Deck : MonoBehaviour
         list.RemoveAt(index);
         
         cardIds = new Stack<string>(list.Reverse<string>());
-        
         return cardId;
     }
 

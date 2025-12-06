@@ -42,7 +42,7 @@ public class Card : MonoBehaviour
     private Vector3 startScale = Vector3.zero;
     private Vector3 targetScale = Vector3.zero;
     
-    [SerializeField] private Sprite faceDownSprite;
+    [SerializeField] public Sprite faceDownSprite;
     /**
      * This is set to the current sprite in the SpriteRenderer on Awake()
      */
