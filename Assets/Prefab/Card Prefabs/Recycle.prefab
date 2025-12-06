@@ -12,10 +12,18 @@ PrefabInstance:
       propertyPath: playBehavior
       value: 
       objectReference: {fileID: 3724941961353034423}
+    - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: faceDownSprite
+      value: 
+      objectReference: {fileID: -8708930659260080023, guid: 4a40e4f7732972b4f8aa4d1b25e6d271, type: 3}
     - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Name
       value: Recycle
       objectReference: {fileID: 0}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -151337346990368438, guid: 5b2797b79e0ecf043a5bcfaa18e1add3, type: 3}
     - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

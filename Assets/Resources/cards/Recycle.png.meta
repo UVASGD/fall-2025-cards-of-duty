@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 43ba98c3e48033c488ba0a78095132d7
+guid: 5b2797b79e0ecf043a5bcfaa18e1add3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -367454486273116015
-    second: Dig Deep!_0
+      213: -151337346990368438
+    second: Recycle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dig Deep!_0
+      name: Recycle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1983192771a86eaf0800000000000000
-      internalID: -367454486273116015
+      spriteID: a4993671c7756edf0800000000000000
+      internalID: -151337346990368438
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dig Deep!_0: -367454486273116015
+      Recycle_0: -151337346990368438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

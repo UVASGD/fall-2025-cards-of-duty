@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: boardBehavior
       value: 
       objectReference: {fileID: -4159234600031224291}
+    - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: faceDownSprite
+      value: 
+      objectReference: {fileID: 3186644271448549817, guid: d1773d1a9285b944d9c5af1d2bea4bc2, type: 3}
     - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Name
       value: Whirlpool

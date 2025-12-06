@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: playBehavior
       value: 
       objectReference: {fileID: 710622929166563438}
+    - target: {fileID: 4233463068714788521, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: faceDownSprite
+      value: 
+      objectReference: {fileID: -6292464595754120111, guid: 99e67529d91efda40b4f151dd1cd5532, type: 3}
     - target: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Name
       value: Mr. Rabbit
