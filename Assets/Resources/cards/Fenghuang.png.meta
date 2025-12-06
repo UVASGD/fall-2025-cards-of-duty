@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 605d21c8195a8bd4d974f93d77086c73
+guid: 34d0f600c87396a46afd405dcba8857d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3856952531725967125
-    second: Sharing is caring_0
+      213: 2407943986160949078
+    second: Fenghuang_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sharing is caring_0
+      name: Fenghuang_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be02eee7b1a597ac0800000000000000
-      internalID: -3856952531725967125
+      spriteID: 657592e2c4cba6120800000000000000
+      internalID: 2407943986160949078
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sharing is caring_0: -3856952531725967125
+      Fenghuang_0: 2407943986160949078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

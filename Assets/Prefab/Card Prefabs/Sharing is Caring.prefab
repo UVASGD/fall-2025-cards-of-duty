@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharing is Caring
       objectReference: {fileID: 0}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3856952531725967125, guid: 605d21c8195a8bd4d974f93d77086c73, type: 3}
     - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

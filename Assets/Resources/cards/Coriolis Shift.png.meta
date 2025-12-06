@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 605d21c8195a8bd4d974f93d77086c73
+guid: ea5e11e3c6ef4e34da7da47b1a73d3a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3856952531725967125
-    second: Sharing is caring_0
+      213: 3524750427390747596
+    second: Coriolis Shift_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sharing is caring_0
+      name: Coriolis Shift_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be02eee7b1a597ac0800000000000000
-      internalID: -3856952531725967125
+      spriteID: cc3288ab6dd6ae030800000000000000
+      internalID: 3524750427390747596
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sharing is caring_0: -3856952531725967125
+      Coriolis Shift_0: 3524750427390747596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

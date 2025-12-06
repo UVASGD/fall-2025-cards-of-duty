@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Duplication
       objectReference: {fileID: 0}
+    - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6942802416177915674, guid: 3468f67792fa2044daafb84ac0c4b3c2, type: 3}
     - target: {fileID: 8536844071002148008, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

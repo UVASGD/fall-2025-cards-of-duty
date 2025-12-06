@@ -59,7 +59,7 @@ public class CreditsCardShow : MonoBehaviour
 
             rawImage.rectTransform.anchoredPosition = canvasPos;
             StartCoroutine(FadeInOut(cardObj));
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
         }
     }
 

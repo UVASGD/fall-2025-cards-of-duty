@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 605d21c8195a8bd4d974f93d77086c73
+guid: 73015b5cfe8c6d6429bff874a45f5109
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3856952531725967125
-    second: Sharing is caring_0
+      213: 5585526445905170247
+    second: Hand Background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sharing is caring_0
+      name: Hand Background_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 42
-        height: 68
+        width: 180
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be02eee7b1a597ac0800000000000000
-      internalID: -3856952531725967125
+      spriteID: 74f4abb85b6c38d40800000000000000
+      internalID: 5585526445905170247
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sharing is caring_0: -3856952531725967125
+      Hand Background_0: 5585526445905170247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

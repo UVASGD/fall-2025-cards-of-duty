@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 605d21c8195a8bd4d974f93d77086c73
+guid: d163aadbb26ac95479a70d42c6eb113f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3856952531725967125
-    second: Sharing is caring_0
+      213: -6021537248528682162
+    second: High tide (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sharing is caring_0
+      name: High tide (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be02eee7b1a597ac0800000000000000
-      internalID: -3856952531725967125
+      spriteID: e433aa3a6c33f6ca0800000000000000
+      internalID: -6021537248528682162
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sharing is caring_0: -3856952531725967125
+      High tide (1)_0: -6021537248528682162
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

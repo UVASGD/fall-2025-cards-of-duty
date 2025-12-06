@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 605d21c8195a8bd4d974f93d77086c73
+guid: f6bd9bbac2355d441bc64ca8a27cc68d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3856952531725967125
-    second: Sharing is caring_0
+      213: 8623019410649819486
+    second: Unbridled potential_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sharing is caring_0
+      name: Unbridled potential_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: be02eee7b1a597ac0800000000000000
-      internalID: -3856952531725967125
+      spriteID: e59a41f977e1ba770800000000000000
+      internalID: 8623019410649819486
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sharing is caring_0: -3856952531725967125
+      Unbridled potential_0: 8623019410649819486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
