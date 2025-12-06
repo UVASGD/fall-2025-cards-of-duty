@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Systems;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -45,6 +46,25 @@ public class Game : MonoBehaviour
         if (player2) player2.SetGame(this);
         if (opponent1) opponent1.SetGame(this);
         if (opponent2) opponent2.SetGame(this);
+
+        if (GameInformation.IsLoaded())
+        {
+            if (player1)
+            {
+                string deckName = GameInformation.GetPlayer1Deck();
+                player1.GetDeck().SetStaticDeck(CardDatabase.GetDeckById(deckName));
+            }
+            if (player2)
+            {
+                string deckName = GameInformation.GetPlayer2Deck();
+                player2.GetDeck().SetStaticDeck(CardDatabase.GetDeckById(deckName));
+            }
+            if (opponent1)
+            {
+                string deckName = GameInformation.GetCpuDeck();
+                opponent1.GetDeck().SetStaticDeck(CardDatabase.GetDeckById(deckName));
+            }
+        }
         
         if (!player1 && !player2) 
         {

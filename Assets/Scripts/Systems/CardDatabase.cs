@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Cards;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,7 +9,9 @@ public class CardDatabase : ScriptableObject
 {
     [System.NonSerialized] private static Dictionary<string, GameObject> cardDictionary = new Dictionary<string, GameObject>();
     [System.NonSerialized] private static Dictionary<string, CardIdentifier> cardInfoDictionary = new Dictionary<string, CardIdentifier>();
+    [System.NonSerialized] private static Dictionary<string, CardDeck> deckDictionary = new Dictionary<string, CardDeck>();
     public List<CardIdentifier> cardList;
+    public List<DeckIdentifier> deckList;
     
     [System.Serializable]
     public class CardIdentifier
@@ -18,6 +21,13 @@ public class CardDatabase : ScriptableObject
         public string name;
         [TextArea(2, 7)]
         public string description;
+    }
+    
+    [System.Serializable]
+    public class DeckIdentifier
+    {
+        public string id;
+        public CardDeck deck;
     }
 
     public static Card InstantiateCard(string str, Transform parent)
@@ -36,6 +46,16 @@ public class CardDatabase : ScriptableObject
         card.SetCardDescription(info.description);
         return card;
     }
+    
+    public static CardDeck GetDeckById(string id)
+    {
+        if (deckDictionary.ContainsKey(id))
+        {
+            return deckDictionary[id];
+        }
+        Debug.Log("Attempted to get non-existent deck: " + id);
+        return null;
+    }
 
     public static Card InstantiateRandomCard(Transform parent)
     {
@@ -53,6 +73,10 @@ public class CardDatabase : ScriptableObject
         foreach (CardIdentifier cardWrapper in cardList)
         {
             cardInfoDictionary[cardWrapper.id] = cardWrapper;
+        }
+        foreach (DeckIdentifier deckWrapper in deckList)
+        {
+            deckDictionary[deckWrapper.id] = deckWrapper.deck;
         }
     }
 

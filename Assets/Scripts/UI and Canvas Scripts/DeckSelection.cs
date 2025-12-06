@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Systems;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +7,15 @@ public class DeckSelection : MonoBehaviour
 {
     [SerializeField] private string gameSceneName;
     [SerializeField] private string mainMenuSceneName;
+    [SerializeField] public List<string> availableDecks;
+    [SerializeField] public List<Sprite> deckIcons;
+    
+    [SerializeField] NextDeckButton player1DeckButton;
+    [SerializeField] NextDeckButton player2DeckButton;
+    [SerializeField] NextDeckButton cpuDeckButton;
+    
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +30,10 @@ public class DeckSelection : MonoBehaviour
 
     public void StartGame()
     {
+        GameInformation.SetPlayer1Deck(player1DeckButton.deck);
+        GameInformation.SetPlayer2Deck(player2DeckButton.deck);
+        GameInformation.SetCpuDeck(cpuDeckButton.deck);
+        
         try
         {
             SceneManager.LoadScene(gameSceneName);
