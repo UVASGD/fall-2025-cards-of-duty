@@ -13,7 +13,7 @@ public class Hand : MonoBehaviour
     /**
      * Left alignment means cards fill in from left-to-right.
      */
-    enum Alignment
+    public enum Alignment
     {
         Left,
         Right
@@ -22,7 +22,7 @@ public class Hand : MonoBehaviour
     // Maximum dimensions of the hand
     [SerializeField] private float maxLeft = 5;
     [SerializeField] private float maxRight = 5;
-    [SerializeField] private Alignment alignment = Alignment.Left;
+    [SerializeField] public Alignment alignment = Alignment.Left;
     [SerializeField] private ExpandHandButton expandHandButton;
     /**
      * The gap between horizontal cards in the hand, in Unity world units

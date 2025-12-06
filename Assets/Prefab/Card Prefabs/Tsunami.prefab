@@ -23,7 +23,7 @@ PrefabInstance:
     - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 61887f5b58666dc4dbd5f9cde0c7927b, type: 3}
+      objectReference: {fileID: 8191787836398006521, guid: 8ae295a0fd3e09548b6e5a8204da8759, type: 3}
     - target: {fileID: 5628423722430148926, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -78,7 +78,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5244891899839244371, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
-      insertIndex: 6
+      insertIndex: -1
       addedObject: {fileID: -5649170466952451456}
   m_SourcePrefab: {fileID: 100100000, guid: d892b21f44bcd3845bc2a8dbb7c32c6e, type: 3}
 --- !u!1 &3640460423825029652 stripped

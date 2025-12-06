@@ -79,6 +79,28 @@ public class Deck : MonoBehaviour
         return card;
     }
 
+    // Grabs the top card from the deck but doesn't put it in hand
+    public Card GrabTopCard()
+    {
+        if (cardIds.Count == 0 && player.GetDiscardPile().Count() == 0)
+        {
+            Game.Log("Deck and discard pile are empty - can't draw a card!");
+            return null;
+        }
+        if (cardIds.Count == 0)
+        {
+            ShuffleDiscardPileIntoDeck(player.GetDiscardPile());
+        }
+        Card card = CardDatabase.InstantiateCard(cardIds.Pop(), transform);
+        return card;
+    }
+    
+    public void PlaceCardOnTop(string cardId)
+    {
+        cardIds.Push(cardId);
+        UpdateText();
+    }
+
     public void LoadDeck()
     {
         if (staticDeck == null) return;

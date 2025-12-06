@@ -18,7 +18,7 @@ MonoBehaviour:
   - cardName: tsunami
     count: 6
   - cardName: whirlpool
-    count: 1
+    count: 0
   - cardName: roughSeas
-    count: 1
+    count: 0
   extraDeck: []

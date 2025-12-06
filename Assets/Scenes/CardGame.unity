@@ -1746,8 +1746,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1592367923
+  m_SortingOrder: -98
   m_TargetDisplay: 0
 --- !u!224 &683994419
 RectTransform:
@@ -2377,7 +2377,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.2, y: 6.54}
+  m_AnchoredPosition: {x: 0.19999991, y: 6.5399995}
   m_SizeDelta: {x: 424.4081, y: 75.7283}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983470131
@@ -3575,9 +3575,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1592367923
+  m_SortingLayer: -1
+  m_SortingOrder: -98
   m_Sprite: {fileID: 498244748355639631, guid: 992c3d5360afdad4b9c0282fc1949e7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3783,9 +3783,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1592367923
+  m_SortingLayer: -1
+  m_SortingOrder: -99
   m_Sprite: {fileID: 5585526445905170247, guid: 73015b5cfe8c6d6429bff874a45f5109, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3860,7 +3860,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1592367923
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_Sprite: {fileID: -1457503134311330512, guid: ba3219d9b8d24f64daaccee183c3280c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5151,9 +5151,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1592367923
+  m_SortingLayer: -1
+  m_SortingOrder: -99
   m_Sprite: {fileID: 5585526445905170247, guid: 73015b5cfe8c6d6429bff874a45f5109, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   m_FlipX: 0
