@@ -7,8 +7,11 @@ namespace CardBehaviors.Implementations
     /**
      * Annihilates half of the opponent's deck and draws that many cards.
      */
+    
     public class AnnihilateOpponentDeckPlayBehavior : PlayBehavior
     {
+        [SerializeField] int requiredAffinityThisTurn = 0;
+        
         public override bool CanPlay()
         {
             if (!base.CanPlay()) return false;
@@ -48,6 +51,9 @@ namespace CardBehaviors.Implementations
                 myDeck.DrawTopCard();
                 yield return new WaitForSeconds(0.3f);
             }
+            
+            card.GetPlayer().SetMinAffinityThisTurn(requiredAffinityThisTurn);
+            Game.Log($"You now need {requiredAffinityThisTurn} total affinity or else you lose!");
             
             card.Discard();
             card.GetPlayer().SetActionable(true);

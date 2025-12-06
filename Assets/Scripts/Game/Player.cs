@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     private bool turn;
     public Dictionary<string, int> affinities = new Dictionary<string, int>();
     private bool starCardPlayedThisTurn = false;
+    private int minAffinityThisTurn = 0;
 
     public delegate void TurnStartAction(Player player);
     public static event TurnStartAction TurnStartEvent;
@@ -153,6 +154,11 @@ public class Player : MonoBehaviour
             cpu.Decide();
         }
     }
+    
+    public void SetMinAffinityThisTurn(int minAffinity)
+    {
+        minAffinityThisTurn = minAffinity;
+    }
 
     public void TurnOver()
     {
@@ -162,8 +168,32 @@ public class Player : MonoBehaviour
         
         // hand.MergeCards();
         hand.UpdateCardLocations();
+
+        if (minAffinityThisTurn > 0)
+        {
+            int totalAffinity = 0;
+            foreach (var affinity in affinities)
+            {
+                totalAffinity += affinity.Value;
+            }
+
+            if (totalAffinity < minAffinityThisTurn)
+            {
+                StartCoroutine(LoseOnAffinity());
+                return;
+            }
+
+            minAffinityThisTurn = 0;
+        }
         
         game.NextTurn(this);
+    }
+
+    IEnumerator LoseOnAffinity()
+    {
+        Game.Log("You didn't gather enough affinity this turn...");
+        yield return new WaitForSeconds(2);
+        Game.PlayerWin(game.GetCpuPlayer1());
     }
 
     public bool IsTurn()

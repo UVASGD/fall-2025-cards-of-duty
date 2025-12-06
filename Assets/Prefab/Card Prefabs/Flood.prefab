@@ -104,3 +104,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.AnnihilateOpponentDeckPlayBehavior
   affinityCost: 1
   affinityType: water
+  requiredAffinityThisTurn: 15
