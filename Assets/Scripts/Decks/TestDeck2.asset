@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TestDeck2
   m_EditorClassIdentifier: Assembly-CSharp::Cards.CardDeck
   cards:
-  - cardName: aNiceDinner
+  - cardName: prettyBird
     count: 5
-  - cardName: tidalSurge
+  - cardName: assemblyLine
     count: 5
   extraDeck: []

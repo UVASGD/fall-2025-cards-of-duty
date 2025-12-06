@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Board
@@ -83,17 +84,18 @@ namespace Board
         //     return false;
         // }
 
-        public bool CountTokenType(string cardID)
+        public int CountTokenType(List<string> cardIDs)
         {
+            int count = 0;
             foreach (Transform child in transform)
             {
                 Card card = child.GetComponent<Card>();
-                if (card != null && card.GetId() == cardID)
+                if (card != null && cardIDs.Contains(card.GetId()))
                 {
-                    return true;
+                    count++;
                 }
             }
-            return false;
+            return count;
         }
         
         public int TokenCount()

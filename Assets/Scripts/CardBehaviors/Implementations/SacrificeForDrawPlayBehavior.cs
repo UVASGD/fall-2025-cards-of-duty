@@ -14,7 +14,8 @@ namespace CardBehaviors.Implementations
             base.Play();
             
             Tokens.TokenSacrificeEvent += OnTokenSacrifice;
-            Game.Log("Sacrifice a (placeholder) token...");
+            string permittedTokens = string.Join(", ", possibleTokenIDs);
+            Game.Log($"Sacrifice a {permittedTokens} token...");
             yield return 0;
         }
 
@@ -30,12 +31,9 @@ namespace CardBehaviors.Implementations
             if (!base.CanPlay()) return false;
             Tokens tokens = card.GetPlayer().GetTokens();
             
-            foreach (string tokenID in possibleTokenIDs)
+            if (tokens.CountTokenType(possibleTokenIDs) > 0)
             {
-                if (tokens.CountTokenType(tokenID))
-                {
-                    return true;
-                }
+                return true;
             }
             Game.Log("You don't have any tokens you can sacrifice!");
             return false;

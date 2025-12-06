@@ -144,6 +144,11 @@ MonoBehaviour:
     card: {fileID: 8727239878425552520, guid: 873226984e63fa448b48f346b91a2f4f, type: 3}
     name: A Nice Dinner
     description: 'Board card: At the start of your turn gain 5 territory'
+  - id: prettyBird
+    card: {fileID: 8834281651569069197, guid: 27911307ef5b5954dab51d260ce3497a, type: 3}
+    name: Pretty Bird
+    description: Sacrifice two mecha tokens, summon a copy of Drone Pidgeon from
+      your extra deck
   deckList:
   - id: water
     deck: {fileID: 11400000, guid: ccf364695fdf22448ba822f2c7ea99fd, type: 2}
