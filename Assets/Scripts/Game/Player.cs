@@ -87,6 +87,12 @@ public class Player : MonoBehaviour
         if (score < 0) return;
         score += delta;
         scoreText.text = $"Territory: {score}";
+        
+        if (score >= 100)
+        {
+            Game.PlayerWin(this);
+            scoreText.color = Color.goldenRod;
+        }
     }
 
     public void RemoveScore(int delta)

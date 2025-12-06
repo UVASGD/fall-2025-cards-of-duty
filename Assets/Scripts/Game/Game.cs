@@ -157,13 +157,23 @@ public class Game : MonoBehaviour
     /**
      * Win message. A bit underwhelming right now.
      */
-    public static void PlayerWin()
+    public static void PlayerWin(Player who)
     {
         if (!staticMessageText) return;
-        staticMessageText.text = "YOU WIN!";
-        staticMessageText.fontSize = 72;
-        staticMessageText.overrideColorTags = true;
-        staticMessageText.color = Color.goldenRod;
+        if (who.IsHuman())
+        {
+            staticMessageText.text = "YOU WIN!";
+            staticMessageText.fontSize = 60;
+            staticMessageText.overrideColorTags = true;
+            staticMessageText.color = Color.goldenRod;
+        }
+        else
+        {
+            staticMessageText.text = "YOU LOSE...";
+            staticMessageText.fontSize = 60;
+            staticMessageText.overrideColorTags = true;
+            staticMessageText.color = Color.darkRed;
+        }
     }
     
     public void BackToMainMenu()

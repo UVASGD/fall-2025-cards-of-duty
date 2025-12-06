@@ -42,7 +42,7 @@ namespace CardBehaviors.Implementations
             yield return new WaitForSeconds(3);
             if (totalCards >= requiredCards)
             {
-                Game.PlayerWin();
+                Game.PlayerWin(card.GetPlayer());
             }
             else
             {
