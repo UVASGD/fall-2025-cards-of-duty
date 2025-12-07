@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Cards.CardDeck
   cards:
   - cardName: bestFriendsForever
-    count: 1
+    count: 0
   - cardName: assembleTheHorde
-    count: 1
+    count: 0
   - cardName: digDeep
-    count: 1
+    count: 0
   - cardName: yggdrasil
-    count: 1
+    count: 0
   - cardName: upcycling
-    count: 2
+    count: 0
   - cardName: bury
     count: 2
   - cardName: forage
-    count: 2
+    count: 0
   - cardName: sharingIsCaring
     count: 2
   - cardName: trading
-    count: 3
+    count: 0
   - cardName: mrRabbit
     count: 1
   - cardName: mrRabbit

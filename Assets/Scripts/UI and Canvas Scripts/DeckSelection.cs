@@ -1,7 +1,11 @@
+using System.Collections;
 using System.Collections.Generic;
 using Systems;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DeckSelection : MonoBehaviour
 {
@@ -19,7 +23,7 @@ public class DeckSelection : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        StartCoroutine(FadeBackground());
     }
 
     // Update is called once per frame
@@ -27,12 +31,29 @@ public class DeckSelection : MonoBehaviour
     {
         
     }
+    
+    IEnumerator FadeBackground()
+    {
+        Image rawImage = GetComponent<Image>();
+        Color originalColor = rawImage.color;
+        float fadeDuration = 2f;
+        float elapsedTime = 0f;
+        
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
+            rawImage.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
+            yield return null;
+        }
+    }
 
     public void StartGame()
     {
         GameInformation.SetPlayer1Deck(player1DeckButton.deck);
         GameInformation.SetPlayer2Deck(player2DeckButton.deck);
-        GameInformation.SetCpuDeck(cpuDeckButton.deck);
+        // GameInformation.SetCpuDeck(cpuDeckButton.deck);
+        GameInformation.SetCpuDeck("cpu");
         
         try
         {

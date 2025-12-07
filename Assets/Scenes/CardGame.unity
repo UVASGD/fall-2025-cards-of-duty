@@ -899,6 +899,8 @@ MonoBehaviour:
   discardPile: {fileID: 1353814483}
   endTurnButton: {fileID: 595412683}
   tokens: {fileID: 1338035324}
+  doNotDrawNextTurn: 0
+  drawExtraNextTurn: 0
   cpu: {fileID: 0}
   cardDatabase: {fileID: 11400000, guid: 2165d98c8e7c2844199d0040c653d71d, type: 2}
 --- !u!4 &448217907
@@ -1278,6 +1280,8 @@ MonoBehaviour:
   discardPile: {fileID: 5756951}
   endTurnButton: {fileID: 0}
   tokens: {fileID: 475737410}
+  doNotDrawNextTurn: 0
+  drawExtraNextTurn: 0
   cpu: {fileID: 562167165}
   cardDatabase: {fileID: 0}
 --- !u!114 &562167165
@@ -1811,6 +1815,8 @@ MonoBehaviour:
   discardPile: {fileID: 2138427450}
   endTurnButton: {fileID: 259553757}
   tokens: {fileID: 6046749527419116676}
+  doNotDrawNextTurn: 0
+  drawExtraNextTurn: 0
   cpu: {fileID: 0}
   cardDatabase: {fileID: 11400000, guid: 2165d98c8e7c2844199d0040c653d71d, type: 2}
 --- !u!4 &703585310
@@ -3861,7 +3867,7 @@ SpriteRenderer:
   m_SortingLayerID: 1592367923
   m_SortingLayer: -1
   m_SortingOrder: -100
-  m_Sprite: {fileID: -1457503134311330512, guid: ba3219d9b8d24f64daaccee183c3280c, type: 3}
+  m_Sprite: {fileID: -527661448579167960, guid: 23e0c250d751e3c4982a8daba9ae01cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -106,6 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce46f3b1eec4d9f9afc9c14775cc6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviors.Implementations.AnnihilateOpponentDeckPlayBehavior
-  affinityCost: 1
+  affinityCost: 0
   affinityType: water
   requiredAffinityThisTurn: 15

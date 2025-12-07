@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cards:
   - cardName: tidalSurge
-    count: 12
-  - cardName: tsunami
     count: 6
+  - cardName: tsunami
+    count: 3
   - cardName: whirlpool
-    count: 0
+    count: 1
   - cardName: roughSeas
-    count: 0
+    count: 1
+  - cardName: hullbreaker
+    count: 3
+  - cardName: flood
+    count: 1
+  - cardName: coldWind
+    count: 3
   extraDeck: []

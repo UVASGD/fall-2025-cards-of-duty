@@ -13,6 +13,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private string creditsSceneName;
     [SerializeField] private Canvas buttonCanvas;
     [SerializeField] private TextMeshProUGUI pressAnyButtonText;
+
+    [SerializeField] private Sprite[] waterFrames;
+    [SerializeField] Image waterRenderer;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -49,6 +52,23 @@ public class MainMenu : MonoBehaviour
         InputSystem.onAnyButtonPress
             .CallOnce(ctrl => ShowButtons());
     }
+
+    IEnumerator FadeOutBackground()
+    {
+        Image rawImage = GetComponent<Image>();
+        Color originalColor = rawImage.color;
+        float fadeDuration = 1f;
+        float elapsedTime = 0f;
+        
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            rawImage.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
+            yield return null;
+        }
+    }
+    
     void ShowButtons()
     {
         buttonCanvas.gameObject.SetActive(true);
@@ -57,7 +77,37 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        
+        StartCoroutine(FadeOutBackground());
+        StartCoroutine(WaterThenNext());
+    }
+
+    IEnumerator WaterThenNext()
+    {
+        RectTransform rt = waterRenderer.GetComponent<RectTransform>();
+
+        // Anchor to full stretch
+        rt.anchorMin = Vector2.zero;
+        rt.anchorMax = Vector2.one;
+
+        // Remove offsets
+        rt.offsetMin = Vector2.zero;
+        rt.offsetMax = Vector2.zero;
+        waterRenderer.gameObject.SetActive(true);
+        // 15 frames, hardcoded
+        for (int i = 0; i < 15; i++)
+        {
+            waterRenderer.sprite = waterFrames[i];
+            if (i > 6)
+            {
+                // Start fading out
+                Color color = waterRenderer.color;
+                float alpha = Mathf.Lerp(1f, 0f, (i - 5) / 9f);
+                waterRenderer.color = new Color(color.r, color.g, color.b, alpha);
+            }
+            yield return new WaitForSeconds(1/15f);
+        }
+
+        yield return new WaitForSeconds(0.5f);
         try
         {
             SceneManager.LoadScene(gameplaySceneName);

@@ -156,3 +156,5 @@ MonoBehaviour:
     deck: {fileID: 11400000, guid: 44953ebc5d900cb4e90dd5fea58f0a6c, type: 2}
   - id: earth
     deck: {fileID: 11400000, guid: 462cb1b78e5a0e743be9111f41022db3, type: 2}
+  - id: cpu
+    deck: {fileID: 11400000, guid: 24e27c33288ad3d46bff636cadd33290, type: 2}
